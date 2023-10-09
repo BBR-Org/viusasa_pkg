@@ -14,7 +14,7 @@ class AllBidElement with _$AllBidElement {
     @JsonKey(name: BidsField.itemImage) String? itemImage,
     @JsonKey(name: BidsField.actualvalue) int? actualValue,
     @JsonKey(name: BidsField.itemDetails) String? itemDetails,
-    @JsonKey(name: BidsField.auctionTag) String? actionTag,
+    @JsonKey(name: BidsField.auctionTag) String? auctionTag,
     @JsonKey(name: BidsField.registrationFee) int? registrationFee,
     @JsonKey(name: BidsField.bidAmount) int? bidAmount,
     @JsonKey(name: BidsField.phoneNumber) String? phoneNumber,

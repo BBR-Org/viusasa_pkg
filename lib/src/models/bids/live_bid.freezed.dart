@@ -21,7 +21,7 @@ LiveBid _$LiveBidFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LiveBid {
   @JsonKey(name: BidsField.auctionTag)
-  String? get actionTag => throw _privateConstructorUsedError;
+  String? get auctionTag => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.category)
   String? get category => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.itemCode)
@@ -68,7 +68,7 @@ abstract class $LiveBidCopyWith<$Res> {
       _$LiveBidCopyWithImpl<$Res, LiveBid>;
   @useResult
   $Res call(
-      {@JsonKey(name: BidsField.auctionTag) String? actionTag,
+      {@JsonKey(name: BidsField.auctionTag) String? auctionTag,
       @JsonKey(name: BidsField.category) String? category,
       @JsonKey(name: BidsField.itemCode) String? itemCode,
       @JsonKey(name: BidsField.description) String? description,
@@ -103,7 +103,7 @@ class _$LiveBidCopyWithImpl<$Res, $Val extends LiveBid>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? actionTag = freezed,
+    Object? auctionTag = freezed,
     Object? category = freezed,
     Object? itemCode = freezed,
     Object? description = freezed,
@@ -123,9 +123,9 @@ class _$LiveBidCopyWithImpl<$Res, $Val extends LiveBid>
     Object? image3 = freezed,
   }) {
     return _then(_value.copyWith(
-      actionTag: freezed == actionTag
-          ? _value.actionTag
-          : actionTag // ignore: cast_nullable_to_non_nullable
+      auctionTag: freezed == auctionTag
+          ? _value.auctionTag
+          : auctionTag // ignore: cast_nullable_to_non_nullable
               as String?,
       category: freezed == category
           ? _value.category
@@ -219,7 +219,7 @@ abstract class _$$_LiveBidCopyWith<$Res> implements $LiveBidCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: BidsField.auctionTag) String? actionTag,
+      {@JsonKey(name: BidsField.auctionTag) String? auctionTag,
       @JsonKey(name: BidsField.category) String? category,
       @JsonKey(name: BidsField.itemCode) String? itemCode,
       @JsonKey(name: BidsField.description) String? description,
@@ -252,7 +252,7 @@ class __$$_LiveBidCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? actionTag = freezed,
+    Object? auctionTag = freezed,
     Object? category = freezed,
     Object? itemCode = freezed,
     Object? description = freezed,
@@ -272,9 +272,9 @@ class __$$_LiveBidCopyWithImpl<$Res>
     Object? image3 = freezed,
   }) {
     return _then(_$_LiveBid(
-      actionTag: freezed == actionTag
-          ? _value.actionTag
-          : actionTag // ignore: cast_nullable_to_non_nullable
+      auctionTag: freezed == auctionTag
+          ? _value.auctionTag
+          : auctionTag // ignore: cast_nullable_to_non_nullable
               as String?,
       category: freezed == category
           ? _value.category
@@ -353,7 +353,7 @@ class __$$_LiveBidCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_LiveBid implements _LiveBid {
   _$_LiveBid(
-      {@JsonKey(name: BidsField.auctionTag) this.actionTag,
+      {@JsonKey(name: BidsField.auctionTag) this.auctionTag,
       @JsonKey(name: BidsField.category) this.category,
       @JsonKey(name: BidsField.itemCode) this.itemCode,
       @JsonKey(name: BidsField.description) this.description,
@@ -377,7 +377,7 @@ class _$_LiveBid implements _LiveBid {
 
   @override
   @JsonKey(name: BidsField.auctionTag)
-  final String? actionTag;
+  final String? auctionTag;
   @override
   @JsonKey(name: BidsField.category)
   final String? category;
@@ -432,7 +432,7 @@ class _$_LiveBid implements _LiveBid {
 
   @override
   String toString() {
-    return 'LiveBid(actionTag: $actionTag, category: $category, itemCode: $itemCode, description: $description, location: $location, features: $features, lastBid: $lastBid, topBid: $topBid, bidType: $bidType, actualvalue: $actualvalue, registrationFee: $registrationFee, reservePrice: $reservePrice, startingPrices: $startingPrices, starting: $starting, ending: $ending, mainImages: $mainImages, image2: $image2, image3: $image3)';
+    return 'LiveBid(auctionTag: $auctionTag, category: $category, itemCode: $itemCode, description: $description, location: $location, features: $features, lastBid: $lastBid, topBid: $topBid, bidType: $bidType, actualvalue: $actualvalue, registrationFee: $registrationFee, reservePrice: $reservePrice, startingPrices: $startingPrices, starting: $starting, ending: $ending, mainImages: $mainImages, image2: $image2, image3: $image3)';
   }
 
   @override
@@ -440,8 +440,8 @@ class _$_LiveBid implements _LiveBid {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LiveBid &&
-            (identical(other.actionTag, actionTag) ||
-                other.actionTag == actionTag) &&
+            (identical(other.auctionTag, auctionTag) ||
+                other.auctionTag == auctionTag) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.itemCode, itemCode) ||
@@ -475,7 +475,7 @@ class _$_LiveBid implements _LiveBid {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      actionTag,
+      auctionTag,
       category,
       itemCode,
       description,
@@ -510,7 +510,7 @@ class _$_LiveBid implements _LiveBid {
 
 abstract class _LiveBid implements LiveBid {
   factory _LiveBid(
-      {@JsonKey(name: BidsField.auctionTag) final String? actionTag,
+      {@JsonKey(name: BidsField.auctionTag) final String? auctionTag,
       @JsonKey(name: BidsField.category) final String? category,
       @JsonKey(name: BidsField.itemCode) final String? itemCode,
       @JsonKey(name: BidsField.description) final String? description,
@@ -533,7 +533,7 @@ abstract class _LiveBid implements LiveBid {
 
   @override
   @JsonKey(name: BidsField.auctionTag)
-  String? get actionTag;
+  String? get auctionTag;
   @override
   @JsonKey(name: BidsField.category)
   String? get category;

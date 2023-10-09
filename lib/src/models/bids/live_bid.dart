@@ -10,7 +10,7 @@ part 'live_bid.g.dart';
 class LiveBid with _$LiveBid {
   @JsonSerializable(explicitToJson: true)
   factory LiveBid({
-    @JsonKey(name: BidsField.auctionTag) String? actionTag,
+    @JsonKey(name: BidsField.auctionTag) String? auctionTag,
     @JsonKey(name: BidsField.category) String? category,
     @JsonKey(name: BidsField.itemCode) String? itemCode,
     @JsonKey(name: BidsField.description) String? description,

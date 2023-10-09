@@ -7,7 +7,7 @@ part of 'live_bid.dart';
 // **************************************************************************
 
 _$_LiveBid _$$_LiveBidFromJson(Map<String, dynamic> json) => _$_LiveBid(
-      actionTag: json['auctionTag'] as String?,
+      auctionTag: json['auctionTag'] as String?,
       category: json['category'] as String?,
       itemCode: json['itemCode'] as String?,
       description: json['description'] as String?,
@@ -35,7 +35,7 @@ _$_LiveBid _$$_LiveBidFromJson(Map<String, dynamic> json) => _$_LiveBid(
 
 Map<String, dynamic> _$$_LiveBidToJson(_$_LiveBid instance) =>
     <String, dynamic>{
-      'auctionTag': instance.actionTag,
+      'auctionTag': instance.auctionTag,
       'category': instance.category,
       'itemCode': instance.itemCode,
       'description': instance.description,

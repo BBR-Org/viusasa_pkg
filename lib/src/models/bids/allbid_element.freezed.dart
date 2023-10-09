@@ -31,7 +31,7 @@ mixin _$AllBidElement {
   @JsonKey(name: BidsField.itemDetails)
   String? get itemDetails => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.auctionTag)
-  String? get actionTag => throw _privateConstructorUsedError;
+  String? get auctionTag => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.registrationFee)
   int? get registrationFee => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.bidAmount)
@@ -63,7 +63,7 @@ abstract class $AllBidElementCopyWith<$Res> {
       @JsonKey(name: BidsField.itemImage) String? itemImage,
       @JsonKey(name: BidsField.actualvalue) int? actualValue,
       @JsonKey(name: BidsField.itemDetails) String? itemDetails,
-      @JsonKey(name: BidsField.auctionTag) String? actionTag,
+      @JsonKey(name: BidsField.auctionTag) String? auctionTag,
       @JsonKey(name: BidsField.registrationFee) int? registrationFee,
       @JsonKey(name: BidsField.bidAmount) int? bidAmount,
       @JsonKey(name: BidsField.phoneNumber) String? phoneNumber,
@@ -90,7 +90,7 @@ class _$AllBidElementCopyWithImpl<$Res, $Val extends AllBidElement>
     Object? itemImage = freezed,
     Object? actualValue = freezed,
     Object? itemDetails = freezed,
-    Object? actionTag = freezed,
+    Object? auctionTag = freezed,
     Object? registrationFee = freezed,
     Object? bidAmount = freezed,
     Object? phoneNumber = freezed,
@@ -119,9 +119,9 @@ class _$AllBidElementCopyWithImpl<$Res, $Val extends AllBidElement>
           ? _value.itemDetails
           : itemDetails // ignore: cast_nullable_to_non_nullable
               as String?,
-      actionTag: freezed == actionTag
-          ? _value.actionTag
-          : actionTag // ignore: cast_nullable_to_non_nullable
+      auctionTag: freezed == auctionTag
+          ? _value.auctionTag
+          : auctionTag // ignore: cast_nullable_to_non_nullable
               as String?,
       registrationFee: freezed == registrationFee
           ? _value.registrationFee
@@ -165,7 +165,7 @@ abstract class _$$_AllBidElementCopyWith<$Res>
       @JsonKey(name: BidsField.itemImage) String? itemImage,
       @JsonKey(name: BidsField.actualvalue) int? actualValue,
       @JsonKey(name: BidsField.itemDetails) String? itemDetails,
-      @JsonKey(name: BidsField.auctionTag) String? actionTag,
+      @JsonKey(name: BidsField.auctionTag) String? auctionTag,
       @JsonKey(name: BidsField.registrationFee) int? registrationFee,
       @JsonKey(name: BidsField.bidAmount) int? bidAmount,
       @JsonKey(name: BidsField.phoneNumber) String? phoneNumber,
@@ -190,7 +190,7 @@ class __$$_AllBidElementCopyWithImpl<$Res>
     Object? itemImage = freezed,
     Object? actualValue = freezed,
     Object? itemDetails = freezed,
-    Object? actionTag = freezed,
+    Object? auctionTag = freezed,
     Object? registrationFee = freezed,
     Object? bidAmount = freezed,
     Object? phoneNumber = freezed,
@@ -219,9 +219,9 @@ class __$$_AllBidElementCopyWithImpl<$Res>
           ? _value.itemDetails
           : itemDetails // ignore: cast_nullable_to_non_nullable
               as String?,
-      actionTag: freezed == actionTag
-          ? _value.actionTag
-          : actionTag // ignore: cast_nullable_to_non_nullable
+      auctionTag: freezed == auctionTag
+          ? _value.auctionTag
+          : auctionTag // ignore: cast_nullable_to_non_nullable
               as String?,
       registrationFee: freezed == registrationFee
           ? _value.registrationFee
@@ -261,7 +261,7 @@ class _$_AllBidElement implements _AllBidElement {
       @JsonKey(name: BidsField.itemImage) this.itemImage,
       @JsonKey(name: BidsField.actualvalue) this.actualValue,
       @JsonKey(name: BidsField.itemDetails) this.itemDetails,
-      @JsonKey(name: BidsField.auctionTag) this.actionTag,
+      @JsonKey(name: BidsField.auctionTag) this.auctionTag,
       @JsonKey(name: BidsField.registrationFee) this.registrationFee,
       @JsonKey(name: BidsField.bidAmount) this.bidAmount,
       @JsonKey(name: BidsField.phoneNumber) this.phoneNumber,
@@ -289,7 +289,7 @@ class _$_AllBidElement implements _AllBidElement {
   final String? itemDetails;
   @override
   @JsonKey(name: BidsField.auctionTag)
-  final String? actionTag;
+  final String? auctionTag;
   @override
   @JsonKey(name: BidsField.registrationFee)
   final int? registrationFee;
@@ -311,7 +311,7 @@ class _$_AllBidElement implements _AllBidElement {
 
   @override
   String toString() {
-    return 'AllBidElement(bidDate: $bidDate, category: $category, itemImage: $itemImage, actualValue: $actualValue, itemDetails: $itemDetails, actionTag: $actionTag, registrationFee: $registrationFee, bidAmount: $bidAmount, phoneNumber: $phoneNumber, customerName: $customerName, closingDate: $closingDate, won: $won)';
+    return 'AllBidElement(bidDate: $bidDate, category: $category, itemImage: $itemImage, actualValue: $actualValue, itemDetails: $itemDetails, auctionTag: $auctionTag, registrationFee: $registrationFee, bidAmount: $bidAmount, phoneNumber: $phoneNumber, customerName: $customerName, closingDate: $closingDate, won: $won)';
   }
 
   @override
@@ -328,8 +328,8 @@ class _$_AllBidElement implements _AllBidElement {
                 other.actualValue == actualValue) &&
             (identical(other.itemDetails, itemDetails) ||
                 other.itemDetails == itemDetails) &&
-            (identical(other.actionTag, actionTag) ||
-                other.actionTag == actionTag) &&
+            (identical(other.auctionTag, auctionTag) ||
+                other.auctionTag == auctionTag) &&
             (identical(other.registrationFee, registrationFee) ||
                 other.registrationFee == registrationFee) &&
             (identical(other.bidAmount, bidAmount) ||
@@ -352,7 +352,7 @@ class _$_AllBidElement implements _AllBidElement {
       itemImage,
       actualValue,
       itemDetails,
-      actionTag,
+      auctionTag,
       registrationFee,
       bidAmount,
       phoneNumber,
@@ -381,7 +381,7 @@ abstract class _AllBidElement implements AllBidElement {
       @JsonKey(name: BidsField.itemImage) final String? itemImage,
       @JsonKey(name: BidsField.actualvalue) final int? actualValue,
       @JsonKey(name: BidsField.itemDetails) final String? itemDetails,
-      @JsonKey(name: BidsField.auctionTag) final String? actionTag,
+      @JsonKey(name: BidsField.auctionTag) final String? auctionTag,
       @JsonKey(name: BidsField.registrationFee) final int? registrationFee,
       @JsonKey(name: BidsField.bidAmount) final int? bidAmount,
       @JsonKey(name: BidsField.phoneNumber) final String? phoneNumber,
@@ -409,7 +409,7 @@ abstract class _AllBidElement implements AllBidElement {
   String? get itemDetails;
   @override
   @JsonKey(name: BidsField.auctionTag)
-  String? get actionTag;
+  String? get auctionTag;
   @override
   @JsonKey(name: BidsField.registrationFee)
   int? get registrationFee;
