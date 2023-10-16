@@ -10,7 +10,7 @@ _$_BidBaseModel _$$_BidBaseModelFromJson(Map<String, dynamic> json) =>
     _$_BidBaseModel(
       category: json['category'] as String?,
       bids: (json['bids'] as List<dynamic>?)
-          ?.map((e) => LiveBid.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Livebid.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

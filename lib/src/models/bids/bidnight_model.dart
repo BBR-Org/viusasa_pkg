@@ -9,8 +9,8 @@ part 'bidnight_model.g.dart';
 class BidnightModel with _$BidnightModel {
   @JsonSerializable(explicitToJson: true)
   factory BidnightModel({
-    @JsonKey(name: BidsField.tonight) List<LiveBid>? tonight,
-    @JsonKey(name: BidsField.tomorrow) List<LiveBid>? tomorrow,
+    @JsonKey(name: BidsField.tonight) List<Livebid>? tonight,
+    @JsonKey(name: BidsField.tomorrow) List<Livebid>? tomorrow,
   }) = _BidnightModel;
 
   factory BidnightModel.fromJson(Map<String, dynamic> json) =>

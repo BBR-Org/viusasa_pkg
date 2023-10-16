@@ -6,7 +6,7 @@ part of 'live_bid.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LiveBid _$$_LiveBidFromJson(Map<String, dynamic> json) => _$_LiveBid(
+_$_Livebid _$$_LivebidFromJson(Map<String, dynamic> json) => _$_Livebid(
       auctionTag: json['auctionTag'] as String?,
       category: json['category'] as String?,
       itemCode: json['itemCode'] as String?,
@@ -33,7 +33,7 @@ _$_LiveBid _$$_LiveBidFromJson(Map<String, dynamic> json) => _$_LiveBid(
       image3: json['image3'] as String?,
     );
 
-Map<String, dynamic> _$$_LiveBidToJson(_$_LiveBid instance) =>
+Map<String, dynamic> _$$_LivebidToJson(_$_Livebid instance) =>
     <String, dynamic>{
       'auctionTag': instance.auctionTag,
       'category': instance.category,

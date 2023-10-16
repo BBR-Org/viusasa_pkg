@@ -21,9 +21,9 @@ BidnightModel _$BidnightModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BidnightModel {
   @JsonKey(name: BidsField.tonight)
-  List<LiveBid>? get tonight => throw _privateConstructorUsedError;
+  List<Livebid>? get tonight => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.tomorrow)
-  List<LiveBid>? get tomorrow => throw _privateConstructorUsedError;
+  List<Livebid>? get tomorrow => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,8 +38,8 @@ abstract class $BidnightModelCopyWith<$Res> {
       _$BidnightModelCopyWithImpl<$Res, BidnightModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: BidsField.tonight) List<LiveBid>? tonight,
-      @JsonKey(name: BidsField.tomorrow) List<LiveBid>? tomorrow});
+      {@JsonKey(name: BidsField.tonight) List<Livebid>? tonight,
+      @JsonKey(name: BidsField.tomorrow) List<Livebid>? tomorrow});
 }
 
 /// @nodoc
@@ -62,11 +62,11 @@ class _$BidnightModelCopyWithImpl<$Res, $Val extends BidnightModel>
       tonight: freezed == tonight
           ? _value.tonight
           : tonight // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
       tomorrow: freezed == tomorrow
           ? _value.tomorrow
           : tomorrow // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
     ) as $Val);
   }
 }
@@ -80,8 +80,8 @@ abstract class _$$_BidnightModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: BidsField.tonight) List<LiveBid>? tonight,
-      @JsonKey(name: BidsField.tomorrow) List<LiveBid>? tomorrow});
+      {@JsonKey(name: BidsField.tonight) List<Livebid>? tonight,
+      @JsonKey(name: BidsField.tomorrow) List<Livebid>? tomorrow});
 }
 
 /// @nodoc
@@ -102,11 +102,11 @@ class __$$_BidnightModelCopyWithImpl<$Res>
       tonight: freezed == tonight
           ? _value._tonight
           : tonight // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
       tomorrow: freezed == tomorrow
           ? _value._tomorrow
           : tomorrow // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
     ));
   }
 }
@@ -116,18 +116,18 @@ class __$$_BidnightModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_BidnightModel implements _BidnightModel {
   _$_BidnightModel(
-      {@JsonKey(name: BidsField.tonight) final List<LiveBid>? tonight,
-      @JsonKey(name: BidsField.tomorrow) final List<LiveBid>? tomorrow})
+      {@JsonKey(name: BidsField.tonight) final List<Livebid>? tonight,
+      @JsonKey(name: BidsField.tomorrow) final List<Livebid>? tomorrow})
       : _tonight = tonight,
         _tomorrow = tomorrow;
 
   factory _$_BidnightModel.fromJson(Map<String, dynamic> json) =>
       _$$_BidnightModelFromJson(json);
 
-  final List<LiveBid>? _tonight;
+  final List<Livebid>? _tonight;
   @override
   @JsonKey(name: BidsField.tonight)
-  List<LiveBid>? get tonight {
+  List<Livebid>? get tonight {
     final value = _tonight;
     if (value == null) return null;
     if (_tonight is EqualUnmodifiableListView) return _tonight;
@@ -135,10 +135,10 @@ class _$_BidnightModel implements _BidnightModel {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<LiveBid>? _tomorrow;
+  final List<Livebid>? _tomorrow;
   @override
   @JsonKey(name: BidsField.tomorrow)
-  List<LiveBid>? get tomorrow {
+  List<Livebid>? get tomorrow {
     final value = _tomorrow;
     if (value == null) return null;
     if (_tomorrow is EqualUnmodifiableListView) return _tomorrow;
@@ -183,8 +183,8 @@ class _$_BidnightModel implements _BidnightModel {
 
 abstract class _BidnightModel implements BidnightModel {
   factory _BidnightModel(
-          {@JsonKey(name: BidsField.tonight) final List<LiveBid>? tonight,
-          @JsonKey(name: BidsField.tomorrow) final List<LiveBid>? tomorrow}) =
+          {@JsonKey(name: BidsField.tonight) final List<Livebid>? tonight,
+          @JsonKey(name: BidsField.tomorrow) final List<Livebid>? tomorrow}) =
       _$_BidnightModel;
 
   factory _BidnightModel.fromJson(Map<String, dynamic> json) =
@@ -192,10 +192,10 @@ abstract class _BidnightModel implements BidnightModel {
 
   @override
   @JsonKey(name: BidsField.tonight)
-  List<LiveBid>? get tonight;
+  List<Livebid>? get tonight;
   @override
   @JsonKey(name: BidsField.tomorrow)
-  List<LiveBid>? get tomorrow;
+  List<Livebid>? get tomorrow;
   @override
   @JsonKey(ignore: true)
   _$$_BidnightModelCopyWith<_$_BidnightModel> get copyWith =>

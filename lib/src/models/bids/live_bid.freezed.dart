@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-LiveBid _$LiveBidFromJson(Map<String, dynamic> json) {
-  return _LiveBid.fromJson(json);
+Livebid _$LivebidFromJson(Map<String, dynamic> json) {
+  return _Livebid.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LiveBid {
+mixin _$Livebid {
   @JsonKey(name: BidsField.auctionTag)
   String? get auctionTag => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.category)
@@ -59,13 +59,13 @@ mixin _$LiveBid {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LiveBidCopyWith<LiveBid> get copyWith => throw _privateConstructorUsedError;
+  $LivebidCopyWith<Livebid> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LiveBidCopyWith<$Res> {
-  factory $LiveBidCopyWith(LiveBid value, $Res Function(LiveBid) then) =
-      _$LiveBidCopyWithImpl<$Res, LiveBid>;
+abstract class $LivebidCopyWith<$Res> {
+  factory $LivebidCopyWith(Livebid value, $Res Function(Livebid) then) =
+      _$LivebidCopyWithImpl<$Res, Livebid>;
   @useResult
   $Res call(
       {@JsonKey(name: BidsField.auctionTag) String? auctionTag,
@@ -91,9 +91,9 @@ abstract class $LiveBidCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LiveBidCopyWithImpl<$Res, $Val extends LiveBid>
-    implements $LiveBidCopyWith<$Res> {
-  _$LiveBidCopyWithImpl(this._value, this._then);
+class _$LivebidCopyWithImpl<$Res, $Val extends Livebid>
+    implements $LivebidCopyWith<$Res> {
+  _$LivebidCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -212,10 +212,10 @@ class _$LiveBidCopyWithImpl<$Res, $Val extends LiveBid>
 }
 
 /// @nodoc
-abstract class _$$_LiveBidCopyWith<$Res> implements $LiveBidCopyWith<$Res> {
-  factory _$$_LiveBidCopyWith(
-          _$_LiveBid value, $Res Function(_$_LiveBid) then) =
-      __$$_LiveBidCopyWithImpl<$Res>;
+abstract class _$$_LivebidCopyWith<$Res> implements $LivebidCopyWith<$Res> {
+  factory _$$_LivebidCopyWith(
+          _$_Livebid value, $Res Function(_$_Livebid) then) =
+      __$$_LivebidCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -243,10 +243,10 @@ abstract class _$$_LiveBidCopyWith<$Res> implements $LiveBidCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LiveBidCopyWithImpl<$Res>
-    extends _$LiveBidCopyWithImpl<$Res, _$_LiveBid>
-    implements _$$_LiveBidCopyWith<$Res> {
-  __$$_LiveBidCopyWithImpl(_$_LiveBid _value, $Res Function(_$_LiveBid) _then)
+class __$$_LivebidCopyWithImpl<$Res>
+    extends _$LivebidCopyWithImpl<$Res, _$_Livebid>
+    implements _$$_LivebidCopyWith<$Res> {
+  __$$_LivebidCopyWithImpl(_$_Livebid _value, $Res Function(_$_Livebid) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -271,7 +271,7 @@ class __$$_LiveBidCopyWithImpl<$Res>
     Object? image2 = freezed,
     Object? image3 = freezed,
   }) {
-    return _then(_$_LiveBid(
+    return _then(_$_Livebid(
       auctionTag: freezed == auctionTag
           ? _value.auctionTag
           : auctionTag // ignore: cast_nullable_to_non_nullable
@@ -351,8 +351,8 @@ class __$$_LiveBidCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_LiveBid implements _LiveBid {
-  _$_LiveBid(
+class _$_Livebid implements _Livebid {
+  _$_Livebid(
       {@JsonKey(name: BidsField.auctionTag) this.auctionTag,
       @JsonKey(name: BidsField.category) this.category,
       @JsonKey(name: BidsField.itemCode) this.itemCode,
@@ -372,8 +372,8 @@ class _$_LiveBid implements _LiveBid {
       @JsonKey(name: BidsField.image2) this.image2,
       @JsonKey(name: BidsField.image3) this.image3});
 
-  factory _$_LiveBid.fromJson(Map<String, dynamic> json) =>
-      _$$_LiveBidFromJson(json);
+  factory _$_Livebid.fromJson(Map<String, dynamic> json) =>
+      _$$_LivebidFromJson(json);
 
   @override
   @JsonKey(name: BidsField.auctionTag)
@@ -432,14 +432,14 @@ class _$_LiveBid implements _LiveBid {
 
   @override
   String toString() {
-    return 'LiveBid(auctionTag: $auctionTag, category: $category, itemCode: $itemCode, description: $description, location: $location, features: $features, lastBid: $lastBid, topBid: $topBid, bidType: $bidType, actualvalue: $actualvalue, registrationFee: $registrationFee, reservePrice: $reservePrice, startingPrices: $startingPrices, starting: $starting, ending: $ending, mainImages: $mainImages, image2: $image2, image3: $image3)';
+    return 'Livebid(auctionTag: $auctionTag, category: $category, itemCode: $itemCode, description: $description, location: $location, features: $features, lastBid: $lastBid, topBid: $topBid, bidType: $bidType, actualvalue: $actualvalue, registrationFee: $registrationFee, reservePrice: $reservePrice, startingPrices: $startingPrices, starting: $starting, ending: $ending, mainImages: $mainImages, image2: $image2, image3: $image3)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LiveBid &&
+            other is _$_Livebid &&
             (identical(other.auctionTag, auctionTag) ||
                 other.auctionTag == auctionTag) &&
             (identical(other.category, category) ||
@@ -497,19 +497,19 @@ class _$_LiveBid implements _LiveBid {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LiveBidCopyWith<_$_LiveBid> get copyWith =>
-      __$$_LiveBidCopyWithImpl<_$_LiveBid>(this, _$identity);
+  _$$_LivebidCopyWith<_$_Livebid> get copyWith =>
+      __$$_LivebidCopyWithImpl<_$_Livebid>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LiveBidToJson(
+    return _$$_LivebidToJson(
       this,
     );
   }
 }
 
-abstract class _LiveBid implements LiveBid {
-  factory _LiveBid(
+abstract class _Livebid implements Livebid {
+  factory _Livebid(
       {@JsonKey(name: BidsField.auctionTag) final String? auctionTag,
       @JsonKey(name: BidsField.category) final String? category,
       @JsonKey(name: BidsField.itemCode) final String? itemCode,
@@ -527,9 +527,9 @@ abstract class _LiveBid implements LiveBid {
       @JsonKey(name: BidsField.ending) final DateTime? ending,
       @JsonKey(name: BidsField.mainImage) final String? mainImages,
       @JsonKey(name: BidsField.image2) final String? image2,
-      @JsonKey(name: BidsField.image3) final String? image3}) = _$_LiveBid;
+      @JsonKey(name: BidsField.image3) final String? image3}) = _$_Livebid;
 
-  factory _LiveBid.fromJson(Map<String, dynamic> json) = _$_LiveBid.fromJson;
+  factory _Livebid.fromJson(Map<String, dynamic> json) = _$_Livebid.fromJson;
 
   @override
   @JsonKey(name: BidsField.auctionTag)
@@ -587,6 +587,6 @@ abstract class _LiveBid implements LiveBid {
   String? get image3;
   @override
   @JsonKey(ignore: true)
-  _$$_LiveBidCopyWith<_$_LiveBid> get copyWith =>
+  _$$_LivebidCopyWith<_$_Livebid> get copyWith =>
       throw _privateConstructorUsedError;
 }

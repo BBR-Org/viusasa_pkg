@@ -11,7 +11,7 @@ class BidBaseModel with _$BidBaseModel {
   @JsonSerializable(explicitToJson: true)
   factory BidBaseModel({
     @JsonKey(name: BidsField.category) String? category,
-    @JsonKey(name: BidsField.bids) List<LiveBid>? bids,
+    @JsonKey(name: BidsField.bids) List<Livebid>? bids,
   }) = _BidBaseModel;
 
   factory BidBaseModel.fromJson(Map<String, dynamic> json) =>

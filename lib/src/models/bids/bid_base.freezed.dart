@@ -23,7 +23,7 @@ mixin _$BidBaseModel {
   @JsonKey(name: BidsField.category)
   String? get category => throw _privateConstructorUsedError;
   @JsonKey(name: BidsField.bids)
-  List<LiveBid>? get bids => throw _privateConstructorUsedError;
+  List<Livebid>? get bids => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +39,7 @@ abstract class $BidBaseModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: BidsField.category) String? category,
-      @JsonKey(name: BidsField.bids) List<LiveBid>? bids});
+      @JsonKey(name: BidsField.bids) List<Livebid>? bids});
 }
 
 /// @nodoc
@@ -66,7 +66,7 @@ class _$BidBaseModelCopyWithImpl<$Res, $Val extends BidBaseModel>
       bids: freezed == bids
           ? _value.bids
           : bids // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
     ) as $Val);
   }
 }
@@ -81,7 +81,7 @@ abstract class _$$_BidBaseModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: BidsField.category) String? category,
-      @JsonKey(name: BidsField.bids) List<LiveBid>? bids});
+      @JsonKey(name: BidsField.bids) List<Livebid>? bids});
 }
 
 /// @nodoc
@@ -106,7 +106,7 @@ class __$$_BidBaseModelCopyWithImpl<$Res>
       bids: freezed == bids
           ? _value._bids
           : bids // ignore: cast_nullable_to_non_nullable
-              as List<LiveBid>?,
+              as List<Livebid>?,
     ));
   }
 }
@@ -117,7 +117,7 @@ class __$$_BidBaseModelCopyWithImpl<$Res>
 class _$_BidBaseModel implements _BidBaseModel {
   _$_BidBaseModel(
       {@JsonKey(name: BidsField.category) this.category,
-      @JsonKey(name: BidsField.bids) final List<LiveBid>? bids})
+      @JsonKey(name: BidsField.bids) final List<Livebid>? bids})
       : _bids = bids;
 
   factory _$_BidBaseModel.fromJson(Map<String, dynamic> json) =>
@@ -126,10 +126,10 @@ class _$_BidBaseModel implements _BidBaseModel {
   @override
   @JsonKey(name: BidsField.category)
   final String? category;
-  final List<LiveBid>? _bids;
+  final List<Livebid>? _bids;
   @override
   @JsonKey(name: BidsField.bids)
-  List<LiveBid>? get bids {
+  List<Livebid>? get bids {
     final value = _bids;
     if (value == null) return null;
     if (_bids is EqualUnmodifiableListView) return _bids;
@@ -174,7 +174,7 @@ class _$_BidBaseModel implements _BidBaseModel {
 abstract class _BidBaseModel implements BidBaseModel {
   factory _BidBaseModel(
           {@JsonKey(name: BidsField.category) final String? category,
-          @JsonKey(name: BidsField.bids) final List<LiveBid>? bids}) =
+          @JsonKey(name: BidsField.bids) final List<Livebid>? bids}) =
       _$_BidBaseModel;
 
   factory _BidBaseModel.fromJson(Map<String, dynamic> json) =
@@ -185,7 +185,7 @@ abstract class _BidBaseModel implements BidBaseModel {
   String? get category;
   @override
   @JsonKey(name: BidsField.bids)
-  List<LiveBid>? get bids;
+  List<Livebid>? get bids;
   @override
   @JsonKey(ignore: true)
   _$$_BidBaseModelCopyWith<_$_BidBaseModel> get copyWith =>

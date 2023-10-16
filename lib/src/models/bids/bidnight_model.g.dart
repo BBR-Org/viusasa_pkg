@@ -9,10 +9,10 @@ part of 'bidnight_model.dart';
 _$_BidnightModel _$$_BidnightModelFromJson(Map<String, dynamic> json) =>
     _$_BidnightModel(
       tonight: (json['tonight'] as List<dynamic>?)
-          ?.map((e) => LiveBid.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Livebid.fromJson(e as Map<String, dynamic>))
           .toList(),
       tomorrow: (json['tomorrow'] as List<dynamic>?)
-          ?.map((e) => LiveBid.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Livebid.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

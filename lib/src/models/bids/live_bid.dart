@@ -7,9 +7,9 @@ part 'live_bid.freezed.dart';
 part 'live_bid.g.dart';
 
 @freezed
-class LiveBid with _$LiveBid {
+class Livebid with _$Livebid {
   @JsonSerializable(explicitToJson: true)
-  factory LiveBid({
+  factory Livebid({
     @JsonKey(name: BidsField.auctionTag) String? auctionTag,
     @JsonKey(name: BidsField.category) String? category,
     @JsonKey(name: BidsField.itemCode) String? itemCode,
@@ -28,8 +28,8 @@ class LiveBid with _$LiveBid {
     @JsonKey(name: BidsField.mainImage) String? mainImages,
     @JsonKey(name: BidsField.image2) String? image2,
     @JsonKey(name: BidsField.image3) String? image3,
-  }) = _LiveBid;
+  }) = _Livebid;
 
-  factory LiveBid.fromJson(Map<String, dynamic> json) =>
-      _$LiveBidFromJson(json);
+  factory Livebid.fromJson(Map<String, dynamic> json) =>
+      _$LivebidFromJson(json);
 }
