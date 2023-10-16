@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'merchant_model.dart';
 import 'product_media.dart';
 
 part 'product.freezed.dart';
@@ -38,7 +39,8 @@ class Product with _$Product {
     @JsonKey(name: 'new_price') String? newPrice,
     @JsonKey(name: 'old_price') String? oldPrice,
     @JsonKey(name: 'discount') double? discount,
-    @JsonKey(name: 'media') List<ProductMedia>? media
+    @JsonKey(name: 'media') List<ProductMedia>? media,
+    @JsonKey(name: 'merchant') MerchantModel? merchant
   }) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>

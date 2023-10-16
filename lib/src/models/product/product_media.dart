@@ -9,6 +9,9 @@ class ProductMedia with _$ProductMedia {
   factory ProductMedia({
     @JsonKey(name: 'mime_type') String? mimeType,
     @JsonKey(name: 'thumbnail') String? thumbNail,
+    @JsonKey(name: 'url') String? url,
+    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'size') int? size,
   }) = _ProductMedia;
 
   factory ProductMedia.fromJson(Map<String, dynamic> json) =>
