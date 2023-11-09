@@ -37,8 +37,9 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
       oldPrice: json['old_price'] as String?,
       discount: (json['discount'] as num?)?.toDouble(),
       media: (json['media'] as List<dynamic>?)
-          ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
-          .toList(),
+              ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
       merchant: json['merchant'] == null
           ? null
           : MerchantModel.fromJson(json['merchant'] as Map<String, dynamic>),

@@ -78,7 +78,7 @@ mixin _$Product {
   String? get oldPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'discount')
   double? get discount => throw _privateConstructorUsedError;
-  @JsonKey(name: 'media')
+  @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media => throw _privateConstructorUsedError;
   @JsonKey(name: 'merchant')
   MerchantModel? get merchant => throw _privateConstructorUsedError;
@@ -123,7 +123,7 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
-      @JsonKey(name: 'media') List<ProductMedia>? media,
+      @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
       @JsonKey(name: 'merchant') MerchantModel? merchant});
 
   $MerchantModelCopyWith<$Res>? get merchant;
@@ -352,7 +352,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
-      @JsonKey(name: 'media') List<ProductMedia>? media,
+      @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
       @JsonKey(name: 'merchant') MerchantModel? merchant});
 
   @override
@@ -564,7 +564,7 @@ class _$_Product implements _Product {
       @JsonKey(name: 'new_price') this.newPrice,
       @JsonKey(name: 'old_price') this.oldPrice,
       @JsonKey(name: 'discount') this.discount,
-      @JsonKey(name: 'media') final List<ProductMedia>? media,
+      @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
       @JsonKey(name: 'merchant') this.merchant})
       : _media = media;
 
@@ -660,7 +660,7 @@ class _$_Product implements _Product {
   final double? discount;
   final List<ProductMedia>? _media;
   @override
-  @JsonKey(name: 'media')
+  @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media {
     final value = _media;
     if (value == null) return null;
@@ -817,7 +817,7 @@ abstract class _Product implements Product {
       @JsonKey(name: 'new_price') final String? newPrice,
       @JsonKey(name: 'old_price') final String? oldPrice,
       @JsonKey(name: 'discount') final double? discount,
-      @JsonKey(name: 'media') final List<ProductMedia>? media,
+      @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
       @JsonKey(name: 'merchant') final MerchantModel? merchant}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
@@ -910,7 +910,7 @@ abstract class _Product implements Product {
   @JsonKey(name: 'discount')
   double? get discount;
   @override
-  @JsonKey(name: 'media')
+  @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media;
   @override
   @JsonKey(name: 'merchant')
