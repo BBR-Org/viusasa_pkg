@@ -40,9 +40,7 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
               ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
-      merchant: json['merchant'] == null
-          ? null
-          : MerchantModel.fromJson(json['merchant'] as Map<String, dynamic>),
+      merchant: json['merchant'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
@@ -77,5 +75,5 @@ Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
       'old_price': instance.oldPrice,
       'discount': instance.discount,
       'media': instance.media?.map((e) => e.toJson()).toList(),
-      'merchant': instance.merchant?.toJson(),
+      'merchant': instance.merchant,
     };

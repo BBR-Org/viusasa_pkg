@@ -13,4 +13,6 @@ class MerchantModel with _$MerchantModel {
 
   factory MerchantModel.fromJson(Map<String, dynamic> json) =>
       _$MerchantModelFromJson(json);
+
+  factory MerchantModel.empty() => MerchantModel(id: 0, name: '');
 }

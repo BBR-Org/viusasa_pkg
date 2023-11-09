@@ -81,7 +81,7 @@ mixin _$Product {
   @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media => throw _privateConstructorUsedError;
   @JsonKey(name: 'merchant')
-  MerchantModel? get merchant => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get merchant => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -124,9 +124,7 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
-      @JsonKey(name: 'merchant') MerchantModel? merchant});
-
-  $MerchantModelCopyWith<$Res>? get merchant;
+      @JsonKey(name: 'merchant') Map<String, dynamic>? merchant});
 }
 
 /// @nodoc
@@ -298,20 +296,8 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       merchant: freezed == merchant
           ? _value.merchant
           : merchant // ignore: cast_nullable_to_non_nullable
-              as MerchantModel?,
+              as Map<String, dynamic>?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MerchantModelCopyWith<$Res>? get merchant {
-    if (_value.merchant == null) {
-      return null;
-    }
-
-    return $MerchantModelCopyWith<$Res>(_value.merchant!, (value) {
-      return _then(_value.copyWith(merchant: value) as $Val);
-    });
   }
 }
 
@@ -353,10 +339,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
-      @JsonKey(name: 'merchant') MerchantModel? merchant});
-
-  @override
-  $MerchantModelCopyWith<$Res>? get merchant;
+      @JsonKey(name: 'merchant') Map<String, dynamic>? merchant});
 }
 
 /// @nodoc
@@ -523,9 +506,9 @@ class __$$_ProductCopyWithImpl<$Res>
           : media // ignore: cast_nullable_to_non_nullable
               as List<ProductMedia>?,
       merchant: freezed == merchant
-          ? _value.merchant
+          ? _value._merchant
           : merchant // ignore: cast_nullable_to_non_nullable
-              as MerchantModel?,
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -565,8 +548,9 @@ class _$_Product implements _Product {
       @JsonKey(name: 'old_price') this.oldPrice,
       @JsonKey(name: 'discount') this.discount,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
-      @JsonKey(name: 'merchant') this.merchant})
-      : _media = media;
+      @JsonKey(name: 'merchant') final Map<String, dynamic>? merchant})
+      : _media = media,
+        _merchant = merchant;
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$$_ProductFromJson(json);
@@ -669,9 +653,16 @@ class _$_Product implements _Product {
     return EqualUnmodifiableListView(value);
   }
 
+  final Map<String, dynamic>? _merchant;
   @override
   @JsonKey(name: 'merchant')
-  final MerchantModel? merchant;
+  Map<String, dynamic>? get merchant {
+    final value = _merchant;
+    if (value == null) return null;
+    if (_merchant is EqualUnmodifiableMapView) return _merchant;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
@@ -731,8 +722,7 @@ class _$_Product implements _Product {
             (identical(other.discount, discount) ||
                 other.discount == discount) &&
             const DeepCollectionEquality().equals(other._media, _media) &&
-            (identical(other.merchant, merchant) ||
-                other.merchant == merchant));
+            const DeepCollectionEquality().equals(other._merchant, _merchant));
   }
 
   @JsonKey(ignore: true)
@@ -769,7 +759,7 @@ class _$_Product implements _Product {
         oldPrice,
         discount,
         const DeepCollectionEquality().hash(_media),
-        merchant
+        const DeepCollectionEquality().hash(_merchant)
       ]);
 
   @JsonKey(ignore: true)
@@ -818,7 +808,8 @@ abstract class _Product implements Product {
       @JsonKey(name: 'old_price') final String? oldPrice,
       @JsonKey(name: 'discount') final double? discount,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
-      @JsonKey(name: 'merchant') final MerchantModel? merchant}) = _$_Product;
+      @JsonKey(name: 'merchant')
+      final Map<String, dynamic>? merchant}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
@@ -914,7 +905,7 @@ abstract class _Product implements Product {
   List<ProductMedia>? get media;
   @override
   @JsonKey(name: 'merchant')
-  MerchantModel? get merchant;
+  Map<String, dynamic>? get merchant;
   @override
   @JsonKey(ignore: true)
   _$$_ProductCopyWith<_$_Product> get copyWith =>
