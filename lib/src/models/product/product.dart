@@ -39,7 +39,7 @@ class Product with _$Product {
     @JsonKey(name: 'old_price') String? oldPrice,
     @JsonKey(name: 'discount') double? discount,
     @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
-    @JsonKey(name: 'merchant') Map<String, dynamic>? merchant,
+    @JsonKey(name: 'merchant', defaultValue: {}) Map<String, dynamic>? merchant,
   }) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>

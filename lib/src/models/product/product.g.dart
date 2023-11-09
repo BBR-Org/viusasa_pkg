@@ -40,7 +40,7 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
               ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
-      merchant: json['merchant'] as Map<String, dynamic>?,
+      merchant: json['merchant'] as Map<String, dynamic>? ?? {},
     );
 
 Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
