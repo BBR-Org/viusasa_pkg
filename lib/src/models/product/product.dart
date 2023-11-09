@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'merchant_model.dart';
 import 'product_media.dart';
 
 part 'product.freezed.dart';
