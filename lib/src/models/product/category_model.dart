@@ -11,7 +11,7 @@ class CategoryModel with _$CategoryModel {
   factory CategoryModel({
     @JsonKey(name: 'id') int? id,
     @JsonKey(name: 'name') String? name,
-    @JsonKey(name: 'products') List<Product>? products,
+    @JsonKey(name: 'products', defaultValue: []) List<Product>? products,
   }) = _CategoryModel;
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) =>

@@ -24,7 +24,7 @@ mixin _$CategoryModel {
   int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'products')
+  @JsonKey(name: 'products', defaultValue: [])
   List<Product>? get products => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $CategoryModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') int? id,
       @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'products') List<Product>? products});
+      @JsonKey(name: 'products', defaultValue: []) List<Product>? products});
 }
 
 /// @nodoc
@@ -90,7 +90,7 @@ abstract class _$$_CategoryModelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') int? id,
       @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'products') List<Product>? products});
+      @JsonKey(name: 'products', defaultValue: []) List<Product>? products});
 }
 
 /// @nodoc
@@ -132,7 +132,8 @@ class _$_CategoryModel implements _CategoryModel {
   _$_CategoryModel(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'products') final List<Product>? products})
+      @JsonKey(name: 'products', defaultValue: [])
+      final List<Product>? products})
       : _products = products;
 
   factory _$_CategoryModel.fromJson(Map<String, dynamic> json) =>
@@ -146,7 +147,7 @@ class _$_CategoryModel implements _CategoryModel {
   final String? name;
   final List<Product>? _products;
   @override
-  @JsonKey(name: 'products')
+  @JsonKey(name: 'products', defaultValue: [])
   List<Product>? get products {
     final value = _products;
     if (value == null) return null;
@@ -191,10 +192,10 @@ class _$_CategoryModel implements _CategoryModel {
 
 abstract class _CategoryModel implements CategoryModel {
   factory _CategoryModel(
-          {@JsonKey(name: 'id') final int? id,
-          @JsonKey(name: 'name') final String? name,
-          @JsonKey(name: 'products') final List<Product>? products}) =
-      _$_CategoryModel;
+      {@JsonKey(name: 'id') final int? id,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'products', defaultValue: [])
+      final List<Product>? products}) = _$_CategoryModel;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
       _$_CategoryModel.fromJson;
@@ -206,7 +207,7 @@ abstract class _CategoryModel implements CategoryModel {
   @JsonKey(name: 'name')
   String? get name;
   @override
-  @JsonKey(name: 'products')
+  @JsonKey(name: 'products', defaultValue: [])
   List<Product>? get products;
   @override
   @JsonKey(ignore: true)
