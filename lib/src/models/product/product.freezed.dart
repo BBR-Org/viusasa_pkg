@@ -78,6 +78,11 @@ mixin _$Product {
   String? get oldPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'discount')
   double? get discount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+  bool? get hasAdCampaign => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ad_campaign_metadata')
+  AdCampaignMetaData? get adCampaignMetadata =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media => throw _privateConstructorUsedError;
   @JsonKey(name: 'merchant', defaultValue: {})
@@ -123,9 +128,15 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
+      @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+      bool? hasAdCampaign,
+      @JsonKey(name: 'ad_campaign_metadata')
+      AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
       @JsonKey(name: 'merchant', defaultValue: {})
       Map<String, dynamic>? merchant});
+
+  $AdCampaignMetaDataCopyWith<$Res>? get adCampaignMetadata;
 }
 
 /// @nodoc
@@ -170,6 +181,8 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? newPrice = freezed,
     Object? oldPrice = freezed,
     Object? discount = freezed,
+    Object? hasAdCampaign = freezed,
+    Object? adCampaignMetadata = freezed,
     Object? media = freezed,
     Object? merchant = freezed,
   }) {
@@ -290,6 +303,14 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double?,
+      hasAdCampaign: freezed == hasAdCampaign
+          ? _value.hasAdCampaign
+          : hasAdCampaign // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      adCampaignMetadata: freezed == adCampaignMetadata
+          ? _value.adCampaignMetadata
+          : adCampaignMetadata // ignore: cast_nullable_to_non_nullable
+              as AdCampaignMetaData?,
       media: freezed == media
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
@@ -299,6 +320,19 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           : merchant // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AdCampaignMetaDataCopyWith<$Res>? get adCampaignMetadata {
+    if (_value.adCampaignMetadata == null) {
+      return null;
+    }
+
+    return $AdCampaignMetaDataCopyWith<$Res>(_value.adCampaignMetadata!,
+        (value) {
+      return _then(_value.copyWith(adCampaignMetadata: value) as $Val);
+    });
   }
 }
 
@@ -339,9 +373,16 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
+      @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+      bool? hasAdCampaign,
+      @JsonKey(name: 'ad_campaign_metadata')
+      AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
       @JsonKey(name: 'merchant', defaultValue: {})
       Map<String, dynamic>? merchant});
+
+  @override
+  $AdCampaignMetaDataCopyWith<$Res>? get adCampaignMetadata;
 }
 
 /// @nodoc
@@ -383,6 +424,8 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? newPrice = freezed,
     Object? oldPrice = freezed,
     Object? discount = freezed,
+    Object? hasAdCampaign = freezed,
+    Object? adCampaignMetadata = freezed,
     Object? media = freezed,
     Object? merchant = freezed,
   }) {
@@ -503,6 +546,14 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double?,
+      hasAdCampaign: freezed == hasAdCampaign
+          ? _value.hasAdCampaign
+          : hasAdCampaign // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      adCampaignMetadata: freezed == adCampaignMetadata
+          ? _value.adCampaignMetadata
+          : adCampaignMetadata // ignore: cast_nullable_to_non_nullable
+              as AdCampaignMetaData?,
       media: freezed == media
           ? _value._media
           : media // ignore: cast_nullable_to_non_nullable
@@ -549,6 +600,8 @@ class _$_Product implements _Product {
       @JsonKey(name: 'new_price') this.newPrice,
       @JsonKey(name: 'old_price') this.oldPrice,
       @JsonKey(name: 'discount') this.discount,
+      @JsonKey(name: 'has_ad_campaign', defaultValue: false) this.hasAdCampaign,
+      @JsonKey(name: 'ad_campaign_metadata') this.adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
       @JsonKey(name: 'merchant', defaultValue: {})
       final Map<String, dynamic>? merchant})
@@ -645,6 +698,12 @@ class _$_Product implements _Product {
   @override
   @JsonKey(name: 'discount')
   final double? discount;
+  @override
+  @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+  final bool? hasAdCampaign;
+  @override
+  @JsonKey(name: 'ad_campaign_metadata')
+  final AdCampaignMetaData? adCampaignMetadata;
   final List<ProductMedia>? _media;
   @override
   @JsonKey(name: 'media', defaultValue: [])
@@ -669,7 +728,7 @@ class _$_Product implements _Product {
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, couponProduct: $couponProduct, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, media: $media, merchant: $merchant)';
+    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, couponProduct: $couponProduct, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, hasAdCampaign: $hasAdCampaign, adCampaignMetadata: $adCampaignMetadata, media: $media, merchant: $merchant)';
   }
 
   @override
@@ -724,6 +783,10 @@ class _$_Product implements _Product {
                 other.oldPrice == oldPrice) &&
             (identical(other.discount, discount) ||
                 other.discount == discount) &&
+            (identical(other.hasAdCampaign, hasAdCampaign) ||
+                other.hasAdCampaign == hasAdCampaign) &&
+            (identical(other.adCampaignMetadata, adCampaignMetadata) ||
+                other.adCampaignMetadata == adCampaignMetadata) &&
             const DeepCollectionEquality().equals(other._media, _media) &&
             const DeepCollectionEquality().equals(other._merchant, _merchant));
   }
@@ -761,6 +824,8 @@ class _$_Product implements _Product {
         newPrice,
         oldPrice,
         discount,
+        hasAdCampaign,
+        adCampaignMetadata,
         const DeepCollectionEquality().hash(_media),
         const DeepCollectionEquality().hash(_merchant)
       ]);
@@ -810,6 +875,10 @@ abstract class _Product implements Product {
       @JsonKey(name: 'new_price') final String? newPrice,
       @JsonKey(name: 'old_price') final String? oldPrice,
       @JsonKey(name: 'discount') final double? discount,
+      @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+      final bool? hasAdCampaign,
+      @JsonKey(name: 'ad_campaign_metadata')
+      final AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
       @JsonKey(name: 'merchant', defaultValue: {})
       final Map<String, dynamic>? merchant}) = _$_Product;
@@ -903,6 +972,12 @@ abstract class _Product implements Product {
   @override
   @JsonKey(name: 'discount')
   double? get discount;
+  @override
+  @JsonKey(name: 'has_ad_campaign', defaultValue: false)
+  bool? get hasAdCampaign;
+  @override
+  @JsonKey(name: 'ad_campaign_metadata')
+  AdCampaignMetaData? get adCampaignMetadata;
   @override
   @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media;

@@ -36,6 +36,11 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
       newPrice: json['new_price'] as String?,
       oldPrice: json['old_price'] as String?,
       discount: (json['discount'] as num?)?.toDouble(),
+      hasAdCampaign: json['has_ad_campaign'] as bool? ?? false,
+      adCampaignMetadata: json['ad_campaign_metadata'] == null
+          ? null
+          : AdCampaignMetaData.fromJson(
+              json['ad_campaign_metadata'] as Map<String, dynamic>),
       media: (json['media'] as List<dynamic>?)
               ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -74,6 +79,8 @@ Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
       'new_price': instance.newPrice,
       'old_price': instance.oldPrice,
       'discount': instance.discount,
+      'has_ad_campaign': instance.hasAdCampaign,
+      'ad_campaign_metadata': instance.adCampaignMetadata?.toJson(),
       'media': instance.media?.map((e) => e.toJson()).toList(),
       'merchant': instance.merchant,
     };

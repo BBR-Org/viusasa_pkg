@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:viusasa_pkg/src/models/product/ad_campaign_metadata.dart';
 
 import 'product_media.dart';
 
@@ -38,6 +39,9 @@ class Product with _$Product {
     @JsonKey(name: 'new_price') String? newPrice,
     @JsonKey(name: 'old_price') String? oldPrice,
     @JsonKey(name: 'discount') double? discount,
+    @JsonKey(name: 'has_ad_campaign', defaultValue: false) bool? hasAdCampaign,
+    @JsonKey(name: 'ad_campaign_metadata')
+        AdCampaignMetaData? adCampaignMetadata,
     @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
     @JsonKey(name: 'merchant', defaultValue: {}) Map<String, dynamic>? merchant,
   }) = _Product;
