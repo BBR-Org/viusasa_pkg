@@ -45,6 +45,10 @@ _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
               ?.map((e) => ProductMedia.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],
+      relatedProducts: (json['related_products'] as List<dynamic>?)
+              ?.map((e) => Product.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
       merchant: json['merchant'] as Map<String, dynamic>? ?? {},
     );
 
@@ -82,5 +86,7 @@ Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
       'has_ad_campaign': instance.hasAdCampaign,
       'ad_campaign_metadata': instance.adCampaignMetadata?.toJson(),
       'media': instance.media?.map((e) => e.toJson()).toList(),
+      'related_products':
+          instance.relatedProducts?.map((e) => e.toJson()).toList(),
       'merchant': instance.merchant,
     };

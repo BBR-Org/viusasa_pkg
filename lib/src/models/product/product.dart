@@ -43,6 +43,8 @@ class Product with _$Product {
     @JsonKey(name: 'ad_campaign_metadata')
         AdCampaignMetaData? adCampaignMetadata,
     @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
+    @JsonKey(name: 'related_products', defaultValue: [])
+        List<Product>? relatedProducts,
     @JsonKey(name: 'merchant', defaultValue: {}) Map<String, dynamic>? merchant,
   }) = _Product;
 

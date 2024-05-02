@@ -85,6 +85,8 @@ mixin _$Product {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media => throw _privateConstructorUsedError;
+  @JsonKey(name: 'related_products', defaultValue: [])
+  List<Product>? get relatedProducts => throw _privateConstructorUsedError;
   @JsonKey(name: 'merchant', defaultValue: {})
   Map<String, dynamic>? get merchant => throw _privateConstructorUsedError;
 
@@ -133,6 +135,8 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'ad_campaign_metadata')
       AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
+      @JsonKey(name: 'related_products', defaultValue: [])
+      List<Product>? relatedProducts,
       @JsonKey(name: 'merchant', defaultValue: {})
       Map<String, dynamic>? merchant});
 
@@ -184,6 +188,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? hasAdCampaign = freezed,
     Object? adCampaignMetadata = freezed,
     Object? media = freezed,
+    Object? relatedProducts = freezed,
     Object? merchant = freezed,
   }) {
     return _then(_value.copyWith(
@@ -315,6 +320,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
               as List<ProductMedia>?,
+      relatedProducts: freezed == relatedProducts
+          ? _value.relatedProducts
+          : relatedProducts // ignore: cast_nullable_to_non_nullable
+              as List<Product>?,
       merchant: freezed == merchant
           ? _value.merchant
           : merchant // ignore: cast_nullable_to_non_nullable
@@ -378,6 +387,8 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'ad_campaign_metadata')
       AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) List<ProductMedia>? media,
+      @JsonKey(name: 'related_products', defaultValue: [])
+      List<Product>? relatedProducts,
       @JsonKey(name: 'merchant', defaultValue: {})
       Map<String, dynamic>? merchant});
 
@@ -427,6 +438,7 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? hasAdCampaign = freezed,
     Object? adCampaignMetadata = freezed,
     Object? media = freezed,
+    Object? relatedProducts = freezed,
     Object? merchant = freezed,
   }) {
     return _then(_$_Product(
@@ -558,6 +570,10 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value._media
           : media // ignore: cast_nullable_to_non_nullable
               as List<ProductMedia>?,
+      relatedProducts: freezed == relatedProducts
+          ? _value._relatedProducts
+          : relatedProducts // ignore: cast_nullable_to_non_nullable
+              as List<Product>?,
       merchant: freezed == merchant
           ? _value._merchant
           : merchant // ignore: cast_nullable_to_non_nullable
@@ -603,9 +619,12 @@ class _$_Product implements _Product {
       @JsonKey(name: 'has_ad_campaign', defaultValue: false) this.hasAdCampaign,
       @JsonKey(name: 'ad_campaign_metadata') this.adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
+      @JsonKey(name: 'related_products', defaultValue: [])
+      final List<Product>? relatedProducts,
       @JsonKey(name: 'merchant', defaultValue: {})
       final Map<String, dynamic>? merchant})
       : _media = media,
+        _relatedProducts = relatedProducts,
         _merchant = merchant;
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
@@ -715,6 +734,17 @@ class _$_Product implements _Product {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Product>? _relatedProducts;
+  @override
+  @JsonKey(name: 'related_products', defaultValue: [])
+  List<Product>? get relatedProducts {
+    final value = _relatedProducts;
+    if (value == null) return null;
+    if (_relatedProducts is EqualUnmodifiableListView) return _relatedProducts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final Map<String, dynamic>? _merchant;
   @override
   @JsonKey(name: 'merchant', defaultValue: {})
@@ -728,7 +758,7 @@ class _$_Product implements _Product {
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, couponProduct: $couponProduct, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, hasAdCampaign: $hasAdCampaign, adCampaignMetadata: $adCampaignMetadata, media: $media, merchant: $merchant)';
+    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, couponProduct: $couponProduct, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, hasAdCampaign: $hasAdCampaign, adCampaignMetadata: $adCampaignMetadata, media: $media, relatedProducts: $relatedProducts, merchant: $merchant)';
   }
 
   @override
@@ -788,6 +818,8 @@ class _$_Product implements _Product {
             (identical(other.adCampaignMetadata, adCampaignMetadata) ||
                 other.adCampaignMetadata == adCampaignMetadata) &&
             const DeepCollectionEquality().equals(other._media, _media) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedProducts, _relatedProducts) &&
             const DeepCollectionEquality().equals(other._merchant, _merchant));
   }
 
@@ -827,6 +859,7 @@ class _$_Product implements _Product {
         hasAdCampaign,
         adCampaignMetadata,
         const DeepCollectionEquality().hash(_media),
+        const DeepCollectionEquality().hash(_relatedProducts),
         const DeepCollectionEquality().hash(_merchant)
       ]);
 
@@ -880,6 +913,8 @@ abstract class _Product implements Product {
       @JsonKey(name: 'ad_campaign_metadata')
       final AdCampaignMetaData? adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
+      @JsonKey(name: 'related_products', defaultValue: [])
+      final List<Product>? relatedProducts,
       @JsonKey(name: 'merchant', defaultValue: {})
       final Map<String, dynamic>? merchant}) = _$_Product;
 
@@ -981,6 +1016,9 @@ abstract class _Product implements Product {
   @override
   @JsonKey(name: 'media', defaultValue: [])
   List<ProductMedia>? get media;
+  @override
+  @JsonKey(name: 'related_products', defaultValue: [])
+  List<Product>? get relatedProducts;
   @override
   @JsonKey(name: 'merchant', defaultValue: {})
   Map<String, dynamic>? get merchant;
