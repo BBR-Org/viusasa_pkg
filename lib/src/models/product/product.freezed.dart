@@ -52,8 +52,16 @@ mixin _$Product {
   bool? get showButton => throw _privateConstructorUsedError;
   @JsonKey(name: 'action_url')
   String? get actionUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'url')
+  String? get url => throw _privateConstructorUsedError;
   @JsonKey(name: 'coupon_product')
   bool? get couponProduct => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thumnail')
+  String? get thumbnail => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thumbnail_mobile')
+  String? get thumbnailMobile => throw _privateConstructorUsedError;
+  @JsonKey(name: 'banner')
+  String? get banner => throw _privateConstructorUsedError;
   @JsonKey(name: 'ext_title')
   String? get extTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'meta_keywords')
@@ -64,6 +72,8 @@ mixin _$Product {
   int? get favoritesCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'ratings_count')
   double? get ratingsCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'count')
+  int? get count => throw _privateConstructorUsedError;
   @JsonKey(name: 'rating_stars')
   double? get ratingStars => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_stars')
@@ -78,6 +88,8 @@ mixin _$Product {
   String? get oldPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'discount')
   double? get discount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'featured')
+  bool? get featured => throw _privateConstructorUsedError;
   @JsonKey(name: 'has_ad_campaign', defaultValue: false)
   bool? get hasAdCampaign => throw _privateConstructorUsedError;
   @JsonKey(name: 'ad_campaign_metadata')
@@ -117,12 +129,17 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'pay_now') bool? payNow,
       @JsonKey(name: 'show_button') bool? showButton,
       @JsonKey(name: 'action_url') String? actionUrl,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'coupon_product') bool? couponProduct,
+      @JsonKey(name: 'thumnail') String? thumbnail,
+      @JsonKey(name: 'thumbnail_mobile') String? thumbnailMobile,
+      @JsonKey(name: 'banner') String? banner,
       @JsonKey(name: 'ext_title') String? extTitle,
       @JsonKey(name: 'meta_keywords') String? metaKeyWords,
       @JsonKey(name: 'meta_description') String? metaDescription,
       @JsonKey(name: 'favorites_count') int? favoritesCount,
       @JsonKey(name: 'ratings_count') double? ratingsCount,
+      @JsonKey(name: 'count') int? count,
       @JsonKey(name: 'rating_stars') double? ratingStars,
       @JsonKey(name: 'total_stars') double? totalStars,
       @JsonKey(name: 'ago') String? ago,
@@ -130,6 +147,7 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
+      @JsonKey(name: 'featured') bool? featured,
       @JsonKey(name: 'has_ad_campaign', defaultValue: false)
       bool? hasAdCampaign,
       @JsonKey(name: 'ad_campaign_metadata')
@@ -172,12 +190,17 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? payNow = freezed,
     Object? showButton = freezed,
     Object? actionUrl = freezed,
+    Object? url = freezed,
     Object? couponProduct = freezed,
+    Object? thumbnail = freezed,
+    Object? thumbnailMobile = freezed,
+    Object? banner = freezed,
     Object? extTitle = freezed,
     Object? metaKeyWords = freezed,
     Object? metaDescription = freezed,
     Object? favoritesCount = freezed,
     Object? ratingsCount = freezed,
+    Object? count = freezed,
     Object? ratingStars = freezed,
     Object? totalStars = freezed,
     Object? ago = freezed,
@@ -185,6 +208,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? newPrice = freezed,
     Object? oldPrice = freezed,
     Object? discount = freezed,
+    Object? featured = freezed,
     Object? hasAdCampaign = freezed,
     Object? adCampaignMetadata = freezed,
     Object? media = freezed,
@@ -256,10 +280,26 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.actionUrl
           : actionUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       couponProduct: freezed == couponProduct
           ? _value.couponProduct
           : couponProduct // ignore: cast_nullable_to_non_nullable
               as bool?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      thumbnailMobile: freezed == thumbnailMobile
+          ? _value.thumbnailMobile
+          : thumbnailMobile // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: freezed == banner
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       extTitle: freezed == extTitle
           ? _value.extTitle
           : extTitle // ignore: cast_nullable_to_non_nullable
@@ -280,6 +320,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.ratingsCount
           : ratingsCount // ignore: cast_nullable_to_non_nullable
               as double?,
+      count: freezed == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
       ratingStars: freezed == ratingStars
           ? _value.ratingStars
           : ratingStars // ignore: cast_nullable_to_non_nullable
@@ -308,6 +352,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double?,
+      featured: freezed == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool?,
       hasAdCampaign: freezed == hasAdCampaign
           ? _value.hasAdCampaign
           : hasAdCampaign // ignore: cast_nullable_to_non_nullable
@@ -369,12 +417,17 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'pay_now') bool? payNow,
       @JsonKey(name: 'show_button') bool? showButton,
       @JsonKey(name: 'action_url') String? actionUrl,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'coupon_product') bool? couponProduct,
+      @JsonKey(name: 'thumnail') String? thumbnail,
+      @JsonKey(name: 'thumbnail_mobile') String? thumbnailMobile,
+      @JsonKey(name: 'banner') String? banner,
       @JsonKey(name: 'ext_title') String? extTitle,
       @JsonKey(name: 'meta_keywords') String? metaKeyWords,
       @JsonKey(name: 'meta_description') String? metaDescription,
       @JsonKey(name: 'favorites_count') int? favoritesCount,
       @JsonKey(name: 'ratings_count') double? ratingsCount,
+      @JsonKey(name: 'count') int? count,
       @JsonKey(name: 'rating_stars') double? ratingStars,
       @JsonKey(name: 'total_stars') double? totalStars,
       @JsonKey(name: 'ago') String? ago,
@@ -382,6 +435,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'new_price') String? newPrice,
       @JsonKey(name: 'old_price') String? oldPrice,
       @JsonKey(name: 'discount') double? discount,
+      @JsonKey(name: 'featured') bool? featured,
       @JsonKey(name: 'has_ad_campaign', defaultValue: false)
       bool? hasAdCampaign,
       @JsonKey(name: 'ad_campaign_metadata')
@@ -422,12 +476,17 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? payNow = freezed,
     Object? showButton = freezed,
     Object? actionUrl = freezed,
+    Object? url = freezed,
     Object? couponProduct = freezed,
+    Object? thumbnail = freezed,
+    Object? thumbnailMobile = freezed,
+    Object? banner = freezed,
     Object? extTitle = freezed,
     Object? metaKeyWords = freezed,
     Object? metaDescription = freezed,
     Object? favoritesCount = freezed,
     Object? ratingsCount = freezed,
+    Object? count = freezed,
     Object? ratingStars = freezed,
     Object? totalStars = freezed,
     Object? ago = freezed,
@@ -435,6 +494,7 @@ class __$$_ProductCopyWithImpl<$Res>
     Object? newPrice = freezed,
     Object? oldPrice = freezed,
     Object? discount = freezed,
+    Object? featured = freezed,
     Object? hasAdCampaign = freezed,
     Object? adCampaignMetadata = freezed,
     Object? media = freezed,
@@ -506,10 +566,26 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.actionUrl
           : actionUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       couponProduct: freezed == couponProduct
           ? _value.couponProduct
           : couponProduct // ignore: cast_nullable_to_non_nullable
               as bool?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      thumbnailMobile: freezed == thumbnailMobile
+          ? _value.thumbnailMobile
+          : thumbnailMobile // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: freezed == banner
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       extTitle: freezed == extTitle
           ? _value.extTitle
           : extTitle // ignore: cast_nullable_to_non_nullable
@@ -530,6 +606,10 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.ratingsCount
           : ratingsCount // ignore: cast_nullable_to_non_nullable
               as double?,
+      count: freezed == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
       ratingStars: freezed == ratingStars
           ? _value.ratingStars
           : ratingStars // ignore: cast_nullable_to_non_nullable
@@ -558,6 +638,10 @@ class __$$_ProductCopyWithImpl<$Res>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double?,
+      featured: freezed == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool?,
       hasAdCampaign: freezed == hasAdCampaign
           ? _value.hasAdCampaign
           : hasAdCampaign // ignore: cast_nullable_to_non_nullable
@@ -603,12 +687,17 @@ class _$_Product implements _Product {
       @JsonKey(name: 'pay_now') this.payNow,
       @JsonKey(name: 'show_button') this.showButton,
       @JsonKey(name: 'action_url') this.actionUrl,
+      @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'coupon_product') this.couponProduct,
+      @JsonKey(name: 'thumnail') this.thumbnail,
+      @JsonKey(name: 'thumbnail_mobile') this.thumbnailMobile,
+      @JsonKey(name: 'banner') this.banner,
       @JsonKey(name: 'ext_title') this.extTitle,
       @JsonKey(name: 'meta_keywords') this.metaKeyWords,
       @JsonKey(name: 'meta_description') this.metaDescription,
       @JsonKey(name: 'favorites_count') this.favoritesCount,
       @JsonKey(name: 'ratings_count') this.ratingsCount,
+      @JsonKey(name: 'count') this.count,
       @JsonKey(name: 'rating_stars') this.ratingStars,
       @JsonKey(name: 'total_stars') this.totalStars,
       @JsonKey(name: 'ago') this.ago,
@@ -616,6 +705,7 @@ class _$_Product implements _Product {
       @JsonKey(name: 'new_price') this.newPrice,
       @JsonKey(name: 'old_price') this.oldPrice,
       @JsonKey(name: 'discount') this.discount,
+      @JsonKey(name: 'featured') this.featured,
       @JsonKey(name: 'has_ad_campaign', defaultValue: false) this.hasAdCampaign,
       @JsonKey(name: 'ad_campaign_metadata') this.adCampaignMetadata,
       @JsonKey(name: 'media', defaultValue: []) final List<ProductMedia>? media,
@@ -679,8 +769,20 @@ class _$_Product implements _Product {
   @JsonKey(name: 'action_url')
   final String? actionUrl;
   @override
+  @JsonKey(name: 'url')
+  final String? url;
+  @override
   @JsonKey(name: 'coupon_product')
   final bool? couponProduct;
+  @override
+  @JsonKey(name: 'thumnail')
+  final String? thumbnail;
+  @override
+  @JsonKey(name: 'thumbnail_mobile')
+  final String? thumbnailMobile;
+  @override
+  @JsonKey(name: 'banner')
+  final String? banner;
   @override
   @JsonKey(name: 'ext_title')
   final String? extTitle;
@@ -696,6 +798,9 @@ class _$_Product implements _Product {
   @override
   @JsonKey(name: 'ratings_count')
   final double? ratingsCount;
+  @override
+  @JsonKey(name: 'count')
+  final int? count;
   @override
   @JsonKey(name: 'rating_stars')
   final double? ratingStars;
@@ -717,6 +822,9 @@ class _$_Product implements _Product {
   @override
   @JsonKey(name: 'discount')
   final double? discount;
+  @override
+  @JsonKey(name: 'featured')
+  final bool? featured;
   @override
   @JsonKey(name: 'has_ad_campaign', defaultValue: false)
   final bool? hasAdCampaign;
@@ -758,7 +866,7 @@ class _$_Product implements _Product {
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, couponProduct: $couponProduct, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, hasAdCampaign: $hasAdCampaign, adCampaignMetadata: $adCampaignMetadata, media: $media, relatedProducts: $relatedProducts, merchant: $merchant)';
+    return 'Product(id: $id, name: $name, slug: $slug, sku: $sku, productCode: $productCode, price: $price, currency: $currency, formattedPrice: $formattedPrice, stock: $stock, excerpt: $excerpt, description: $description, active: $active, bidNow: $bidNow, payNow: $payNow, showButton: $showButton, actionUrl: $actionUrl, url: $url, couponProduct: $couponProduct, thumbnail: $thumbnail, thumbnailMobile: $thumbnailMobile, banner: $banner, extTitle: $extTitle, metaKeyWords: $metaKeyWords, metaDescription: $metaDescription, favoritesCount: $favoritesCount, ratingsCount: $ratingsCount, count: $count, ratingStars: $ratingStars, totalStars: $totalStars, ago: $ago, hasVideo: $hasVideo, newPrice: $newPrice, oldPrice: $oldPrice, discount: $discount, featured: $featured, hasAdCampaign: $hasAdCampaign, adCampaignMetadata: $adCampaignMetadata, media: $media, relatedProducts: $relatedProducts, merchant: $merchant)';
   }
 
   @override
@@ -788,8 +896,14 @@ class _$_Product implements _Product {
                 other.showButton == showButton) &&
             (identical(other.actionUrl, actionUrl) ||
                 other.actionUrl == actionUrl) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.couponProduct, couponProduct) ||
                 other.couponProduct == couponProduct) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
+            (identical(other.thumbnailMobile, thumbnailMobile) ||
+                other.thumbnailMobile == thumbnailMobile) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
             (identical(other.extTitle, extTitle) ||
                 other.extTitle == extTitle) &&
             (identical(other.metaKeyWords, metaKeyWords) ||
@@ -800,6 +914,7 @@ class _$_Product implements _Product {
                 other.favoritesCount == favoritesCount) &&
             (identical(other.ratingsCount, ratingsCount) ||
                 other.ratingsCount == ratingsCount) &&
+            (identical(other.count, count) || other.count == count) &&
             (identical(other.ratingStars, ratingStars) ||
                 other.ratingStars == ratingStars) &&
             (identical(other.totalStars, totalStars) ||
@@ -813,6 +928,8 @@ class _$_Product implements _Product {
                 other.oldPrice == oldPrice) &&
             (identical(other.discount, discount) ||
                 other.discount == discount) &&
+            (identical(other.featured, featured) ||
+                other.featured == featured) &&
             (identical(other.hasAdCampaign, hasAdCampaign) ||
                 other.hasAdCampaign == hasAdCampaign) &&
             (identical(other.adCampaignMetadata, adCampaignMetadata) ||
@@ -843,12 +960,17 @@ class _$_Product implements _Product {
         payNow,
         showButton,
         actionUrl,
+        url,
         couponProduct,
+        thumbnail,
+        thumbnailMobile,
+        banner,
         extTitle,
         metaKeyWords,
         metaDescription,
         favoritesCount,
         ratingsCount,
+        count,
         ratingStars,
         totalStars,
         ago,
@@ -856,6 +978,7 @@ class _$_Product implements _Product {
         newPrice,
         oldPrice,
         discount,
+        featured,
         hasAdCampaign,
         adCampaignMetadata,
         const DeepCollectionEquality().hash(_media),
@@ -895,12 +1018,17 @@ abstract class _Product implements Product {
       @JsonKey(name: 'pay_now') final bool? payNow,
       @JsonKey(name: 'show_button') final bool? showButton,
       @JsonKey(name: 'action_url') final String? actionUrl,
+      @JsonKey(name: 'url') final String? url,
       @JsonKey(name: 'coupon_product') final bool? couponProduct,
+      @JsonKey(name: 'thumnail') final String? thumbnail,
+      @JsonKey(name: 'thumbnail_mobile') final String? thumbnailMobile,
+      @JsonKey(name: 'banner') final String? banner,
       @JsonKey(name: 'ext_title') final String? extTitle,
       @JsonKey(name: 'meta_keywords') final String? metaKeyWords,
       @JsonKey(name: 'meta_description') final String? metaDescription,
       @JsonKey(name: 'favorites_count') final int? favoritesCount,
       @JsonKey(name: 'ratings_count') final double? ratingsCount,
+      @JsonKey(name: 'count') final int? count,
       @JsonKey(name: 'rating_stars') final double? ratingStars,
       @JsonKey(name: 'total_stars') final double? totalStars,
       @JsonKey(name: 'ago') final String? ago,
@@ -908,6 +1036,7 @@ abstract class _Product implements Product {
       @JsonKey(name: 'new_price') final String? newPrice,
       @JsonKey(name: 'old_price') final String? oldPrice,
       @JsonKey(name: 'discount') final double? discount,
+      @JsonKey(name: 'featured') final bool? featured,
       @JsonKey(name: 'has_ad_campaign', defaultValue: false)
       final bool? hasAdCampaign,
       @JsonKey(name: 'ad_campaign_metadata')
@@ -969,8 +1098,20 @@ abstract class _Product implements Product {
   @JsonKey(name: 'action_url')
   String? get actionUrl;
   @override
+  @JsonKey(name: 'url')
+  String? get url;
+  @override
   @JsonKey(name: 'coupon_product')
   bool? get couponProduct;
+  @override
+  @JsonKey(name: 'thumnail')
+  String? get thumbnail;
+  @override
+  @JsonKey(name: 'thumbnail_mobile')
+  String? get thumbnailMobile;
+  @override
+  @JsonKey(name: 'banner')
+  String? get banner;
   @override
   @JsonKey(name: 'ext_title')
   String? get extTitle;
@@ -986,6 +1127,9 @@ abstract class _Product implements Product {
   @override
   @JsonKey(name: 'ratings_count')
   double? get ratingsCount;
+  @override
+  @JsonKey(name: 'count')
+  int? get count;
   @override
   @JsonKey(name: 'rating_stars')
   double? get ratingStars;
@@ -1007,6 +1151,9 @@ abstract class _Product implements Product {
   @override
   @JsonKey(name: 'discount')
   double? get discount;
+  @override
+  @JsonKey(name: 'featured')
+  bool? get featured;
   @override
   @JsonKey(name: 'has_ad_campaign', defaultValue: false)
   bool? get hasAdCampaign;
