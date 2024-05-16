@@ -12,3 +12,4 @@ export 'live_bid.dart';
 export 'single_bid.dart';
 export 'useractivebid_model.dart';
 export 'userallbid_model.dart';
+export 'bid_now.dart';

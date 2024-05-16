@@ -6,3 +6,6 @@ export 'product.dart';
 export 'product_detail.dart';
 export 'product_media.dart';
 export 'reward_model.dart';
+export 'shopping_data.dart';
+export 'shopping_model.dart';
+export 'slider_model.dart';
