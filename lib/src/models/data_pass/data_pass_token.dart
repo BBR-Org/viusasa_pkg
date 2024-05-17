@@ -10,6 +10,7 @@ class DataPassToken with _$DataPassToken {
     @JsonKey(name: 'access_token') String? accessToken,
     @JsonKey(name: 'expires_in') int? expires,
     @JsonKey(name: 'token_type') String? tokenType,
+    @JsonKey(name: 'expires_at') DateTime? expiresAt,
   }) = _DataPassToken;
 
   factory DataPassToken.fromJson(Map<String, dynamic> json) =>

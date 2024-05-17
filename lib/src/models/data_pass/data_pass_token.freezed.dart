@@ -26,6 +26,8 @@ mixin _$DataPassToken {
   int? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'token_type')
   String? get tokenType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'expires_at')
+  DateTime? get expiresAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +44,8 @@ abstract class $DataPassTokenCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'access_token') String? accessToken,
       @JsonKey(name: 'expires_in') int? expires,
-      @JsonKey(name: 'token_type') String? tokenType});
+      @JsonKey(name: 'token_type') String? tokenType,
+      @JsonKey(name: 'expires_at') DateTime? expiresAt});
 }
 
 /// @nodoc
@@ -61,6 +64,7 @@ class _$DataPassTokenCopyWithImpl<$Res, $Val extends DataPassToken>
     Object? accessToken = freezed,
     Object? expires = freezed,
     Object? tokenType = freezed,
+    Object? expiresAt = freezed,
   }) {
     return _then(_value.copyWith(
       accessToken: freezed == accessToken
@@ -75,6 +79,10 @@ class _$DataPassTokenCopyWithImpl<$Res, $Val extends DataPassToken>
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
               as String?,
+      expiresAt: freezed == expiresAt
+          ? _value.expiresAt
+          : expiresAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -90,7 +98,8 @@ abstract class _$$_DataPassTokenCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'access_token') String? accessToken,
       @JsonKey(name: 'expires_in') int? expires,
-      @JsonKey(name: 'token_type') String? tokenType});
+      @JsonKey(name: 'token_type') String? tokenType,
+      @JsonKey(name: 'expires_at') DateTime? expiresAt});
 }
 
 /// @nodoc
@@ -107,6 +116,7 @@ class __$$_DataPassTokenCopyWithImpl<$Res>
     Object? accessToken = freezed,
     Object? expires = freezed,
     Object? tokenType = freezed,
+    Object? expiresAt = freezed,
   }) {
     return _then(_$_DataPassToken(
       accessToken: freezed == accessToken
@@ -121,6 +131,10 @@ class __$$_DataPassTokenCopyWithImpl<$Res>
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
               as String?,
+      expiresAt: freezed == expiresAt
+          ? _value.expiresAt
+          : expiresAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -132,7 +146,8 @@ class _$_DataPassToken implements _DataPassToken {
   _$_DataPassToken(
       {@JsonKey(name: 'access_token') this.accessToken,
       @JsonKey(name: 'expires_in') this.expires,
-      @JsonKey(name: 'token_type') this.tokenType});
+      @JsonKey(name: 'token_type') this.tokenType,
+      @JsonKey(name: 'expires_at') this.expiresAt});
 
   factory _$_DataPassToken.fromJson(Map<String, dynamic> json) =>
       _$$_DataPassTokenFromJson(json);
@@ -146,10 +161,13 @@ class _$_DataPassToken implements _DataPassToken {
   @override
   @JsonKey(name: 'token_type')
   final String? tokenType;
+  @override
+  @JsonKey(name: 'expires_at')
+  final DateTime? expiresAt;
 
   @override
   String toString() {
-    return 'DataPassToken(accessToken: $accessToken, expires: $expires, tokenType: $tokenType)';
+    return 'DataPassToken(accessToken: $accessToken, expires: $expires, tokenType: $tokenType, expiresAt: $expiresAt)';
   }
 
   @override
@@ -161,12 +179,15 @@ class _$_DataPassToken implements _DataPassToken {
                 other.accessToken == accessToken) &&
             (identical(other.expires, expires) || other.expires == expires) &&
             (identical(other.tokenType, tokenType) ||
-                other.tokenType == tokenType));
+                other.tokenType == tokenType) &&
+            (identical(other.expiresAt, expiresAt) ||
+                other.expiresAt == expiresAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, accessToken, expires, tokenType);
+  int get hashCode =>
+      Object.hash(runtimeType, accessToken, expires, tokenType, expiresAt);
 
   @JsonKey(ignore: true)
   @override
@@ -184,9 +205,11 @@ class _$_DataPassToken implements _DataPassToken {
 
 abstract class _DataPassToken implements DataPassToken {
   factory _DataPassToken(
-      {@JsonKey(name: 'access_token') final String? accessToken,
-      @JsonKey(name: 'expires_in') final int? expires,
-      @JsonKey(name: 'token_type') final String? tokenType}) = _$_DataPassToken;
+          {@JsonKey(name: 'access_token') final String? accessToken,
+          @JsonKey(name: 'expires_in') final int? expires,
+          @JsonKey(name: 'token_type') final String? tokenType,
+          @JsonKey(name: 'expires_at') final DateTime? expiresAt}) =
+      _$_DataPassToken;
 
   factory _DataPassToken.fromJson(Map<String, dynamic> json) =
       _$_DataPassToken.fromJson;
@@ -200,6 +223,9 @@ abstract class _DataPassToken implements DataPassToken {
   @override
   @JsonKey(name: 'token_type')
   String? get tokenType;
+  @override
+  @JsonKey(name: 'expires_at')
+  DateTime? get expiresAt;
   @override
   @JsonKey(ignore: true)
   _$$_DataPassTokenCopyWith<_$_DataPassToken> get copyWith =>

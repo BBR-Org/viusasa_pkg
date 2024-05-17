@@ -11,6 +11,9 @@ _$_DataPassToken _$$_DataPassTokenFromJson(Map<String, dynamic> json) =>
       accessToken: json['access_token'] as String?,
       expires: json['expires_in'] as int?,
       tokenType: json['token_type'] as String?,
+      expiresAt: json['expires_at'] == null
+          ? null
+          : DateTime.parse(json['expires_at'] as String),
     );
 
 Map<String, dynamic> _$$_DataPassTokenToJson(_$_DataPassToken instance) =>
@@ -18,4 +21,5 @@ Map<String, dynamic> _$$_DataPassTokenToJson(_$_DataPassToken instance) =>
       'access_token': instance.accessToken,
       'expires_in': instance.expires,
       'token_type': instance.tokenType,
+      'expires_at': instance.expiresAt?.toIso8601String(),
     };
