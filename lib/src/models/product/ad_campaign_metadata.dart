@@ -14,7 +14,8 @@ class AdCampaignMetaData with _$AdCampaignMetaData {
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'playable_type') String? playableType,
     @JsonKey(name: 'playable_url') String? playableUrl,
-    @JsonKey(name: 'playable_duration') double? playableDuration,
+    @JsonKey(name: 'playable_duration', defaultValue: 0)
+        dynamic playableDuration,
     @JsonKey(name: 'action_url') String? actionUrl,
     @JsonKey(name: 'watch_times') int? watchTimes,
   }) = _AdCampaignMetaData;

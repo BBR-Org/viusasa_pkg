@@ -32,8 +32,8 @@ mixin _$AdCampaignMetaData {
   String? get playableType => throw _privateConstructorUsedError;
   @JsonKey(name: 'playable_url')
   String? get playableUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'playable_duration')
-  double? get playableDuration => throw _privateConstructorUsedError;
+  @JsonKey(name: 'playable_duration', defaultValue: 0)
+  dynamic get playableDuration => throw _privateConstructorUsedError;
   @JsonKey(name: 'action_url')
   String? get actionUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'watch_times')
@@ -58,7 +58,8 @@ abstract class $AdCampaignMetaDataCopyWith<$Res> {
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'playable_type') String? playableType,
       @JsonKey(name: 'playable_url') String? playableUrl,
-      @JsonKey(name: 'playable_duration') double? playableDuration,
+      @JsonKey(name: 'playable_duration', defaultValue: 0)
+      dynamic playableDuration,
       @JsonKey(name: 'action_url') String? actionUrl,
       @JsonKey(name: 'watch_times') int? watchTimes});
 
@@ -116,7 +117,7 @@ class _$AdCampaignMetaDataCopyWithImpl<$Res, $Val extends AdCampaignMetaData>
       playableDuration: freezed == playableDuration
           ? _value.playableDuration
           : playableDuration // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as dynamic,
       actionUrl: freezed == actionUrl
           ? _value.actionUrl
           : actionUrl // ignore: cast_nullable_to_non_nullable
@@ -156,7 +157,8 @@ abstract class _$$_AdCampaignMetaDataCopyWith<$Res>
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'playable_type') String? playableType,
       @JsonKey(name: 'playable_url') String? playableUrl,
-      @JsonKey(name: 'playable_duration') double? playableDuration,
+      @JsonKey(name: 'playable_duration', defaultValue: 0)
+      dynamic playableDuration,
       @JsonKey(name: 'action_url') String? actionUrl,
       @JsonKey(name: 'watch_times') int? watchTimes});
 
@@ -213,7 +215,7 @@ class __$$_AdCampaignMetaDataCopyWithImpl<$Res>
       playableDuration: freezed == playableDuration
           ? _value.playableDuration
           : playableDuration // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as dynamic,
       actionUrl: freezed == actionUrl
           ? _value.actionUrl
           : actionUrl // ignore: cast_nullable_to_non_nullable
@@ -237,7 +239,8 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
       @JsonKey(name: 'type') this.type,
       @JsonKey(name: 'playable_type') this.playableType,
       @JsonKey(name: 'playable_url') this.playableUrl,
-      @JsonKey(name: 'playable_duration') this.playableDuration,
+      @JsonKey(name: 'playable_duration', defaultValue: 0)
+      this.playableDuration,
       @JsonKey(name: 'action_url') this.actionUrl,
       @JsonKey(name: 'watch_times') this.watchTimes});
 
@@ -263,8 +266,8 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
   @JsonKey(name: 'playable_url')
   final String? playableUrl;
   @override
-  @JsonKey(name: 'playable_duration')
-  final double? playableDuration;
+  @JsonKey(name: 'playable_duration', defaultValue: 0)
+  final dynamic playableDuration;
   @override
   @JsonKey(name: 'action_url')
   final String? actionUrl;
@@ -291,8 +294,8 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
                 other.playableType == playableType) &&
             (identical(other.playableUrl, playableUrl) ||
                 other.playableUrl == playableUrl) &&
-            (identical(other.playableDuration, playableDuration) ||
-                other.playableDuration == playableDuration) &&
+            const DeepCollectionEquality()
+                .equals(other.playableDuration, playableDuration) &&
             (identical(other.actionUrl, actionUrl) ||
                 other.actionUrl == actionUrl) &&
             (identical(other.watchTimes, watchTimes) ||
@@ -301,8 +304,17 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, hasRewards, reward, type,
-      playableType, playableUrl, playableDuration, actionUrl, watchTimes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      hasRewards,
+      reward,
+      type,
+      playableType,
+      playableUrl,
+      const DeepCollectionEquality().hash(playableDuration),
+      actionUrl,
+      watchTimes);
 
   @JsonKey(ignore: true)
   @override
@@ -327,7 +339,8 @@ abstract class _AdCampaignMetaData implements AdCampaignMetaData {
           @JsonKey(name: 'type') final String? type,
           @JsonKey(name: 'playable_type') final String? playableType,
           @JsonKey(name: 'playable_url') final String? playableUrl,
-          @JsonKey(name: 'playable_duration') final double? playableDuration,
+          @JsonKey(name: 'playable_duration', defaultValue: 0)
+          final dynamic playableDuration,
           @JsonKey(name: 'action_url') final String? actionUrl,
           @JsonKey(name: 'watch_times') final int? watchTimes}) =
       _$_AdCampaignMetaData;
@@ -354,8 +367,8 @@ abstract class _AdCampaignMetaData implements AdCampaignMetaData {
   @JsonKey(name: 'playable_url')
   String? get playableUrl;
   @override
-  @JsonKey(name: 'playable_duration')
-  double? get playableDuration;
+  @JsonKey(name: 'playable_duration', defaultValue: 0)
+  dynamic get playableDuration;
   @override
   @JsonKey(name: 'action_url')
   String? get actionUrl;

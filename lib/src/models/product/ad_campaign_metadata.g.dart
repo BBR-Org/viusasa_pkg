@@ -17,7 +17,7 @@ _$_AdCampaignMetaData _$$_AdCampaignMetaDataFromJson(
       type: json['type'] as String?,
       playableType: json['playable_type'] as String?,
       playableUrl: json['playable_url'] as String?,
-      playableDuration: (json['playable_duration'] as num?)?.toDouble(),
+      playableDuration: json['playable_duration'] ?? 0,
       actionUrl: json['action_url'] as String?,
       watchTimes: json['watch_times'] as int?,
     );
