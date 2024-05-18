@@ -31,7 +31,7 @@ class UserData with _$UserData {
     @JsonKey(name: 'terms_accepted') bool? termsAccepted,
     @JsonKey(name: 'offline_payment_flow') bool? offlinePaymentFlow,
     @JsonKey(name: 'wallet_status') WalletStatus? walletStatus,
-    @JsonKey(name: 'token') DataPassToken? token,
+    @JsonKey(name: 'token') DataPassToken? token, 
   }) = _UserData;
 
   factory UserData.fromJson(Map<String, dynamic> json) =>
