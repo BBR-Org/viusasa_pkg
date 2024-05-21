@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'pagination.dart';
+part of 'pagination_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,50 +14,52 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Pagination _$PaginationFromJson(Map<String, dynamic> json) {
-  return _Pagination.fromJson(json);
+PaginationModel _$PaginationModelFromJson(Map<String, dynamic> json) {
+  return _PaginationModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Pagination {
+mixin _$PaginationModel {
+  @JsonKey(name: 'total')
   int? get total => throw _privateConstructorUsedError;
+  @JsonKey(name: 'count')
   int? get count => throw _privateConstructorUsedError;
-  @JsonKey(name: DataPassFields.perPage)
+  @JsonKey(name: 'per_page')
   int? get perPage => throw _privateConstructorUsedError;
-  @JsonKey(name: DataPassFields.currentPage)
+  @JsonKey(name: 'current_page')
   int? get currentPage => throw _privateConstructorUsedError;
-  @JsonKey(name: DataPassFields.totalPages)
+  @JsonKey(name: 'total_pages')
   int? get totalPages => throw _privateConstructorUsedError;
-  @JsonKey(name: DataPassFields.links)
-  Links? get links => throw _privateConstructorUsedError;
+  @JsonKey(name: 'links')
+  LinkModel? get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PaginationCopyWith<Pagination> get copyWith =>
+  $PaginationModelCopyWith<PaginationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PaginationCopyWith<$Res> {
-  factory $PaginationCopyWith(
-          Pagination value, $Res Function(Pagination) then) =
-      _$PaginationCopyWithImpl<$Res, Pagination>;
+abstract class $PaginationModelCopyWith<$Res> {
+  factory $PaginationModelCopyWith(
+          PaginationModel value, $Res Function(PaginationModel) then) =
+      _$PaginationModelCopyWithImpl<$Res, PaginationModel>;
   @useResult
   $Res call(
-      {int? total,
-      int? count,
-      @JsonKey(name: DataPassFields.perPage) int? perPage,
-      @JsonKey(name: DataPassFields.currentPage) int? currentPage,
-      @JsonKey(name: DataPassFields.totalPages) int? totalPages,
-      @JsonKey(name: DataPassFields.links) Links? links});
+      {@JsonKey(name: 'total') int? total,
+      @JsonKey(name: 'count') int? count,
+      @JsonKey(name: 'per_page') int? perPage,
+      @JsonKey(name: 'current_page') int? currentPage,
+      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'links') LinkModel? link});
 
-  $LinksCopyWith<$Res>? get links;
+  $LinkModelCopyWith<$Res>? get link;
 }
 
 /// @nodoc
-class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
-    implements $PaginationCopyWith<$Res> {
-  _$PaginationCopyWithImpl(this._value, this._then);
+class _$PaginationModelCopyWithImpl<$Res, $Val extends PaginationModel>
+    implements $PaginationModelCopyWith<$Res> {
+  _$PaginationModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -72,7 +74,7 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
     Object? perPage = freezed,
     Object? currentPage = freezed,
     Object? totalPages = freezed,
-    Object? links = freezed,
+    Object? link = freezed,
   }) {
     return _then(_value.copyWith(
       total: freezed == total
@@ -95,52 +97,52 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
               as int?,
-      links: freezed == links
-          ? _value.links
-          : links // ignore: cast_nullable_to_non_nullable
-              as Links?,
+      link: freezed == link
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as LinkModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LinksCopyWith<$Res>? get links {
-    if (_value.links == null) {
+  $LinkModelCopyWith<$Res>? get link {
+    if (_value.link == null) {
       return null;
     }
 
-    return $LinksCopyWith<$Res>(_value.links!, (value) {
-      return _then(_value.copyWith(links: value) as $Val);
+    return $LinkModelCopyWith<$Res>(_value.link!, (value) {
+      return _then(_value.copyWith(link: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_PaginationCopyWith<$Res>
-    implements $PaginationCopyWith<$Res> {
-  factory _$$_PaginationCopyWith(
-          _$_Pagination value, $Res Function(_$_Pagination) then) =
-      __$$_PaginationCopyWithImpl<$Res>;
+abstract class _$$_PaginationModelCopyWith<$Res>
+    implements $PaginationModelCopyWith<$Res> {
+  factory _$$_PaginationModelCopyWith(
+          _$_PaginationModel value, $Res Function(_$_PaginationModel) then) =
+      __$$_PaginationModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int? total,
-      int? count,
-      @JsonKey(name: DataPassFields.perPage) int? perPage,
-      @JsonKey(name: DataPassFields.currentPage) int? currentPage,
-      @JsonKey(name: DataPassFields.totalPages) int? totalPages,
-      @JsonKey(name: DataPassFields.links) Links? links});
+      {@JsonKey(name: 'total') int? total,
+      @JsonKey(name: 'count') int? count,
+      @JsonKey(name: 'per_page') int? perPage,
+      @JsonKey(name: 'current_page') int? currentPage,
+      @JsonKey(name: 'total_pages') int? totalPages,
+      @JsonKey(name: 'links') LinkModel? link});
 
   @override
-  $LinksCopyWith<$Res>? get links;
+  $LinkModelCopyWith<$Res>? get link;
 }
 
 /// @nodoc
-class __$$_PaginationCopyWithImpl<$Res>
-    extends _$PaginationCopyWithImpl<$Res, _$_Pagination>
-    implements _$$_PaginationCopyWith<$Res> {
-  __$$_PaginationCopyWithImpl(
-      _$_Pagination _value, $Res Function(_$_Pagination) _then)
+class __$$_PaginationModelCopyWithImpl<$Res>
+    extends _$PaginationModelCopyWithImpl<$Res, _$_PaginationModel>
+    implements _$$_PaginationModelCopyWith<$Res> {
+  __$$_PaginationModelCopyWithImpl(
+      _$_PaginationModel _value, $Res Function(_$_PaginationModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,9 +153,9 @@ class __$$_PaginationCopyWithImpl<$Res>
     Object? perPage = freezed,
     Object? currentPage = freezed,
     Object? totalPages = freezed,
-    Object? links = freezed,
+    Object? link = freezed,
   }) {
-    return _then(_$_Pagination(
+    return _then(_$_PaginationModel(
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -174,10 +176,10 @@ class __$$_PaginationCopyWithImpl<$Res>
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
               as int?,
-      links: freezed == links
-          ? _value.links
-          : links // ignore: cast_nullable_to_non_nullable
-              as Links?,
+      link: freezed == link
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as LinkModel?,
     ));
   }
 }
@@ -185,45 +187,47 @@ class __$$_PaginationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Pagination implements _Pagination {
-  _$_Pagination(
-      {this.total,
-      this.count,
-      @JsonKey(name: DataPassFields.perPage) this.perPage,
-      @JsonKey(name: DataPassFields.currentPage) this.currentPage,
-      @JsonKey(name: DataPassFields.totalPages) this.totalPages,
-      @JsonKey(name: DataPassFields.links) this.links});
+class _$_PaginationModel implements _PaginationModel {
+  _$_PaginationModel(
+      {@JsonKey(name: 'total') this.total,
+      @JsonKey(name: 'count') this.count,
+      @JsonKey(name: 'per_page') this.perPage,
+      @JsonKey(name: 'current_page') this.currentPage,
+      @JsonKey(name: 'total_pages') this.totalPages,
+      @JsonKey(name: 'links') this.link});
 
-  factory _$_Pagination.fromJson(Map<String, dynamic> json) =>
-      _$$_PaginationFromJson(json);
+  factory _$_PaginationModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PaginationModelFromJson(json);
 
   @override
+  @JsonKey(name: 'total')
   final int? total;
   @override
+  @JsonKey(name: 'count')
   final int? count;
   @override
-  @JsonKey(name: DataPassFields.perPage)
+  @JsonKey(name: 'per_page')
   final int? perPage;
   @override
-  @JsonKey(name: DataPassFields.currentPage)
+  @JsonKey(name: 'current_page')
   final int? currentPage;
   @override
-  @JsonKey(name: DataPassFields.totalPages)
+  @JsonKey(name: 'total_pages')
   final int? totalPages;
   @override
-  @JsonKey(name: DataPassFields.links)
-  final Links? links;
+  @JsonKey(name: 'links')
+  final LinkModel? link;
 
   @override
   String toString() {
-    return 'Pagination(total: $total, count: $count, perPage: $perPage, currentPage: $currentPage, totalPages: $totalPages, links: $links)';
+    return 'PaginationModel(total: $total, count: $count, perPage: $perPage, currentPage: $currentPage, totalPages: $totalPages, link: $link)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Pagination &&
+            other is _$_PaginationModel &&
             (identical(other.total, total) || other.total == total) &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.perPage, perPage) || other.perPage == perPage) &&
@@ -231,58 +235,60 @@ class _$_Pagination implements _Pagination {
                 other.currentPage == currentPage) &&
             (identical(other.totalPages, totalPages) ||
                 other.totalPages == totalPages) &&
-            (identical(other.links, links) || other.links == links));
+            (identical(other.link, link) || other.link == link));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, total, count, perPage, currentPage, totalPages, links);
+      runtimeType, total, count, perPage, currentPage, totalPages, link);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaginationCopyWith<_$_Pagination> get copyWith =>
-      __$$_PaginationCopyWithImpl<_$_Pagination>(this, _$identity);
+  _$$_PaginationModelCopyWith<_$_PaginationModel> get copyWith =>
+      __$$_PaginationModelCopyWithImpl<_$_PaginationModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaginationToJson(
+    return _$$_PaginationModelToJson(
       this,
     );
   }
 }
 
-abstract class _Pagination implements Pagination {
-  factory _Pagination(
-      {final int? total,
-      final int? count,
-      @JsonKey(name: DataPassFields.perPage) final int? perPage,
-      @JsonKey(name: DataPassFields.currentPage) final int? currentPage,
-      @JsonKey(name: DataPassFields.totalPages) final int? totalPages,
-      @JsonKey(name: DataPassFields.links) final Links? links}) = _$_Pagination;
+abstract class _PaginationModel implements PaginationModel {
+  factory _PaginationModel(
+      {@JsonKey(name: 'total') final int? total,
+      @JsonKey(name: 'count') final int? count,
+      @JsonKey(name: 'per_page') final int? perPage,
+      @JsonKey(name: 'current_page') final int? currentPage,
+      @JsonKey(name: 'total_pages') final int? totalPages,
+      @JsonKey(name: 'links') final LinkModel? link}) = _$_PaginationModel;
 
-  factory _Pagination.fromJson(Map<String, dynamic> json) =
-      _$_Pagination.fromJson;
+  factory _PaginationModel.fromJson(Map<String, dynamic> json) =
+      _$_PaginationModel.fromJson;
 
   @override
+  @JsonKey(name: 'total')
   int? get total;
   @override
+  @JsonKey(name: 'count')
   int? get count;
   @override
-  @JsonKey(name: DataPassFields.perPage)
+  @JsonKey(name: 'per_page')
   int? get perPage;
   @override
-  @JsonKey(name: DataPassFields.currentPage)
+  @JsonKey(name: 'current_page')
   int? get currentPage;
   @override
-  @JsonKey(name: DataPassFields.totalPages)
+  @JsonKey(name: 'total_pages')
   int? get totalPages;
   @override
-  @JsonKey(name: DataPassFields.links)
-  Links? get links;
+  @JsonKey(name: 'links')
+  LinkModel? get link;
   @override
   @JsonKey(ignore: true)
-  _$$_PaginationCopyWith<_$_Pagination> get copyWith =>
+  _$$_PaginationModelCopyWith<_$_PaginationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

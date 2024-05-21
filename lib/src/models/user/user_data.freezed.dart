@@ -49,7 +49,7 @@ mixin _$UserData {
   @JsonKey(name: 'email_verified')
   bool? get emailVerified => throw _privateConstructorUsedError;
   @JsonKey(name: 'phone_verified')
-  bool? get phoneVerified => throw _privateConstructorUsedError; 
+  bool? get phoneVerified => throw _privateConstructorUsedError;
   @JsonKey(name: 'profile_complete')
   bool? get profileComplete => throw _privateConstructorUsedError;
   @JsonKey(name: 'password_reset')
