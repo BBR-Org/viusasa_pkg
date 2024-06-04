@@ -15,6 +15,9 @@ _$_DataGenre _$$_DataGenreFromJson(Map<String, dynamic> json) => _$_DataGenre(
       albums: (json['albums'] as List<dynamic>?)
           ?.map((e) => TrackModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      artists: (json['artists'] as List<dynamic>?)
+          ?.map((e) => GenreModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_DataGenreToJson(_$_DataGenre instance) =>
@@ -23,4 +26,5 @@ Map<String, dynamic> _$$_DataGenreToJson(_$_DataGenre instance) =>
       'genre_name': instance.genreName,
       'tracks': instance.tracks?.map((e) => e.toJson()).toList(),
       'albums': instance.albums?.map((e) => e.toJson()).toList(),
+      'artists': instance.artists?.map((e) => e.toJson()).toList(),
     };

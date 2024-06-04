@@ -1,5 +1,6 @@
 export 'bids/index.dart';
 export 'data_pass/index.dart';
+export 'music/index.dart';
 export 'product/index.dart';
 export 'user/index.dart';
 

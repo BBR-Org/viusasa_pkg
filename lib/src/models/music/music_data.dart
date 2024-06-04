@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'music_slider.dart';
 import 'track_model.dart';
 
 part 'music_data.freezed.dart';
@@ -14,6 +15,10 @@ class MusicData with _$MusicData {
     List<TrackModel>? others,
     List<TrackModel>? tracks,
     List<TrackModel>? related,
+    List<MusicSlider>? sliders,
+    List<TrackModel>? latest,
+    List<TrackModel>? trending,
+    List<TrackModel>? played,
   }) = _MusicData;
 
   factory MusicData.fromJson(Map<String, dynamic> json) =>

@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'genre_model.dart';
 import 'track_model.dart';
 
 part 'data_genre.freezed.dart';
@@ -13,6 +14,7 @@ class DataGenre with _$DataGenre {
     @JsonKey(name: 'genre_name') String? genreName,
     List<TrackModel>? tracks,
     List<TrackModel>? albums,
+    List<GenreModel>? artists,
   }) = _DataGenre;
 
   factory DataGenre.fromJson(Map<String, dynamic> json) =>

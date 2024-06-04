@@ -25,6 +25,10 @@ mixin _$MusicData {
   List<TrackModel>? get others => throw _privateConstructorUsedError;
   List<TrackModel>? get tracks => throw _privateConstructorUsedError;
   List<TrackModel>? get related => throw _privateConstructorUsedError;
+  List<MusicSlider>? get sliders => throw _privateConstructorUsedError;
+  List<TrackModel>? get latest => throw _privateConstructorUsedError;
+  List<TrackModel>? get trending => throw _privateConstructorUsedError;
+  List<TrackModel>? get played => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +46,11 @@ abstract class $MusicDataCopyWith<$Res> {
       TrackModel? album,
       List<TrackModel>? others,
       List<TrackModel>? tracks,
-      List<TrackModel>? related});
+      List<TrackModel>? related,
+      List<MusicSlider>? sliders,
+      List<TrackModel>? latest,
+      List<TrackModel>? trending,
+      List<TrackModel>? played});
 
   $TrackModelCopyWith<$Res>? get track;
   $TrackModelCopyWith<$Res>? get album;
@@ -66,6 +74,10 @@ class _$MusicDataCopyWithImpl<$Res, $Val extends MusicData>
     Object? others = freezed,
     Object? tracks = freezed,
     Object? related = freezed,
+    Object? sliders = freezed,
+    Object? latest = freezed,
+    Object? trending = freezed,
+    Object? played = freezed,
   }) {
     return _then(_value.copyWith(
       track: freezed == track
@@ -87,6 +99,22 @@ class _$MusicDataCopyWithImpl<$Res, $Val extends MusicData>
       related: freezed == related
           ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
+      sliders: freezed == sliders
+          ? _value.sliders
+          : sliders // ignore: cast_nullable_to_non_nullable
+              as List<MusicSlider>?,
+      latest: freezed == latest
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
+      trending: freezed == trending
+          ? _value.trending
+          : trending // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
+      played: freezed == played
+          ? _value.played
+          : played // ignore: cast_nullable_to_non_nullable
               as List<TrackModel>?,
     ) as $Val);
   }
@@ -128,7 +156,11 @@ abstract class _$$_MusicDataCopyWith<$Res> implements $MusicDataCopyWith<$Res> {
       TrackModel? album,
       List<TrackModel>? others,
       List<TrackModel>? tracks,
-      List<TrackModel>? related});
+      List<TrackModel>? related,
+      List<MusicSlider>? sliders,
+      List<TrackModel>? latest,
+      List<TrackModel>? trending,
+      List<TrackModel>? played});
 
   @override
   $TrackModelCopyWith<$Res>? get track;
@@ -152,6 +184,10 @@ class __$$_MusicDataCopyWithImpl<$Res>
     Object? others = freezed,
     Object? tracks = freezed,
     Object? related = freezed,
+    Object? sliders = freezed,
+    Object? latest = freezed,
+    Object? trending = freezed,
+    Object? played = freezed,
   }) {
     return _then(_$_MusicData(
       track: freezed == track
@@ -174,6 +210,22 @@ class __$$_MusicDataCopyWithImpl<$Res>
           ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
               as List<TrackModel>?,
+      sliders: freezed == sliders
+          ? _value._sliders
+          : sliders // ignore: cast_nullable_to_non_nullable
+              as List<MusicSlider>?,
+      latest: freezed == latest
+          ? _value._latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
+      trending: freezed == trending
+          ? _value._trending
+          : trending // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
+      played: freezed == played
+          ? _value._played
+          : played // ignore: cast_nullable_to_non_nullable
+              as List<TrackModel>?,
     ));
   }
 }
@@ -187,10 +239,18 @@ class _$_MusicData implements _MusicData {
       this.album,
       final List<TrackModel>? others,
       final List<TrackModel>? tracks,
-      final List<TrackModel>? related})
+      final List<TrackModel>? related,
+      final List<MusicSlider>? sliders,
+      final List<TrackModel>? latest,
+      final List<TrackModel>? trending,
+      final List<TrackModel>? played})
       : _others = others,
         _tracks = tracks,
-        _related = related;
+        _related = related,
+        _sliders = sliders,
+        _latest = latest,
+        _trending = trending,
+        _played = played;
 
   factory _$_MusicData.fromJson(Map<String, dynamic> json) =>
       _$$_MusicDataFromJson(json);
@@ -229,9 +289,49 @@ class _$_MusicData implements _MusicData {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<MusicSlider>? _sliders;
+  @override
+  List<MusicSlider>? get sliders {
+    final value = _sliders;
+    if (value == null) return null;
+    if (_sliders is EqualUnmodifiableListView) return _sliders;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TrackModel>? _latest;
+  @override
+  List<TrackModel>? get latest {
+    final value = _latest;
+    if (value == null) return null;
+    if (_latest is EqualUnmodifiableListView) return _latest;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TrackModel>? _trending;
+  @override
+  List<TrackModel>? get trending {
+    final value = _trending;
+    if (value == null) return null;
+    if (_trending is EqualUnmodifiableListView) return _trending;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TrackModel>? _played;
+  @override
+  List<TrackModel>? get played {
+    final value = _played;
+    if (value == null) return null;
+    if (_played is EqualUnmodifiableListView) return _played;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'MusicData(track: $track, album: $album, others: $others, tracks: $tracks, related: $related)';
+    return 'MusicData(track: $track, album: $album, others: $others, tracks: $tracks, related: $related, sliders: $sliders, latest: $latest, trending: $trending, played: $played)';
   }
 
   @override
@@ -243,7 +343,11 @@ class _$_MusicData implements _MusicData {
             (identical(other.album, album) || other.album == album) &&
             const DeepCollectionEquality().equals(other._others, _others) &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
-            const DeepCollectionEquality().equals(other._related, _related));
+            const DeepCollectionEquality().equals(other._related, _related) &&
+            const DeepCollectionEquality().equals(other._sliders, _sliders) &&
+            const DeepCollectionEquality().equals(other._latest, _latest) &&
+            const DeepCollectionEquality().equals(other._trending, _trending) &&
+            const DeepCollectionEquality().equals(other._played, _played));
   }
 
   @JsonKey(ignore: true)
@@ -254,7 +358,11 @@ class _$_MusicData implements _MusicData {
       album,
       const DeepCollectionEquality().hash(_others),
       const DeepCollectionEquality().hash(_tracks),
-      const DeepCollectionEquality().hash(_related));
+      const DeepCollectionEquality().hash(_related),
+      const DeepCollectionEquality().hash(_sliders),
+      const DeepCollectionEquality().hash(_latest),
+      const DeepCollectionEquality().hash(_trending),
+      const DeepCollectionEquality().hash(_played));
 
   @JsonKey(ignore: true)
   @override
@@ -276,7 +384,11 @@ abstract class _MusicData implements MusicData {
       final TrackModel? album,
       final List<TrackModel>? others,
       final List<TrackModel>? tracks,
-      final List<TrackModel>? related}) = _$_MusicData;
+      final List<TrackModel>? related,
+      final List<MusicSlider>? sliders,
+      final List<TrackModel>? latest,
+      final List<TrackModel>? trending,
+      final List<TrackModel>? played}) = _$_MusicData;
 
   factory _MusicData.fromJson(Map<String, dynamic> json) =
       _$_MusicData.fromJson;
@@ -291,6 +403,14 @@ abstract class _MusicData implements MusicData {
   List<TrackModel>? get tracks;
   @override
   List<TrackModel>? get related;
+  @override
+  List<MusicSlider>? get sliders;
+  @override
+  List<TrackModel>? get latest;
+  @override
+  List<TrackModel>? get trending;
+  @override
+  List<TrackModel>? get played;
   @override
   @JsonKey(ignore: true)
   _$$_MusicDataCopyWith<_$_MusicData> get copyWith =>

@@ -22,6 +22,18 @@ _$_MusicData _$$_MusicDataFromJson(Map<String, dynamic> json) => _$_MusicData(
       related: (json['related'] as List<dynamic>?)
           ?.map((e) => TrackModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      sliders: (json['sliders'] as List<dynamic>?)
+          ?.map((e) => MusicSlider.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      latest: (json['latest'] as List<dynamic>?)
+          ?.map((e) => TrackModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      trending: (json['trending'] as List<dynamic>?)
+          ?.map((e) => TrackModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      played: (json['played'] as List<dynamic>?)
+          ?.map((e) => TrackModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_MusicDataToJson(_$_MusicData instance) =>
@@ -31,4 +43,8 @@ Map<String, dynamic> _$$_MusicDataToJson(_$_MusicData instance) =>
       'others': instance.others?.map((e) => e.toJson()).toList(),
       'tracks': instance.tracks?.map((e) => e.toJson()).toList(),
       'related': instance.related?.map((e) => e.toJson()).toList(),
+      'sliders': instance.sliders?.map((e) => e.toJson()).toList(),
+      'latest': instance.latest?.map((e) => e.toJson()).toList(),
+      'trending': instance.trending?.map((e) => e.toJson()).toList(),
+      'played': instance.played?.map((e) => e.toJson()).toList(),
     };

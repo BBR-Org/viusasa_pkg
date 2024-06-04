@@ -19,7 +19,7 @@ _$_AdCampaignMetaData _$$_AdCampaignMetaDataFromJson(
       playableUrl: json['playable_url'] as String?,
       playableDuration: json['playable_duration'] ?? 0,
       actionUrl: json['action_url'] as String?,
-      watchTimes: json['watch_times'] as int?,
+      watchTimes: json['watch_times'],
     );
 
 Map<String, dynamic> _$$_AdCampaignMetaDataToJson(

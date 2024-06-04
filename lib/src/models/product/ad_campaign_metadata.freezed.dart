@@ -37,7 +37,7 @@ mixin _$AdCampaignMetaData {
   @JsonKey(name: 'action_url')
   String? get actionUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'watch_times')
-  int? get watchTimes => throw _privateConstructorUsedError;
+  dynamic get watchTimes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -61,7 +61,7 @@ abstract class $AdCampaignMetaDataCopyWith<$Res> {
       @JsonKey(name: 'playable_duration', defaultValue: 0)
       dynamic playableDuration,
       @JsonKey(name: 'action_url') String? actionUrl,
-      @JsonKey(name: 'watch_times') int? watchTimes});
+      @JsonKey(name: 'watch_times') dynamic watchTimes});
 
   $RewardModelCopyWith<$Res>? get reward;
 }
@@ -125,7 +125,7 @@ class _$AdCampaignMetaDataCopyWithImpl<$Res, $Val extends AdCampaignMetaData>
       watchTimes: freezed == watchTimes
           ? _value.watchTimes
           : watchTimes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
     ) as $Val);
   }
 
@@ -160,7 +160,7 @@ abstract class _$$_AdCampaignMetaDataCopyWith<$Res>
       @JsonKey(name: 'playable_duration', defaultValue: 0)
       dynamic playableDuration,
       @JsonKey(name: 'action_url') String? actionUrl,
-      @JsonKey(name: 'watch_times') int? watchTimes});
+      @JsonKey(name: 'watch_times') dynamic watchTimes});
 
   @override
   $RewardModelCopyWith<$Res>? get reward;
@@ -223,7 +223,7 @@ class __$$_AdCampaignMetaDataCopyWithImpl<$Res>
       watchTimes: freezed == watchTimes
           ? _value.watchTimes
           : watchTimes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
     ));
   }
 }
@@ -273,7 +273,7 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
   final String? actionUrl;
   @override
   @JsonKey(name: 'watch_times')
-  final int? watchTimes;
+  final dynamic watchTimes;
 
   @override
   String toString() {
@@ -298,8 +298,8 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
                 .equals(other.playableDuration, playableDuration) &&
             (identical(other.actionUrl, actionUrl) ||
                 other.actionUrl == actionUrl) &&
-            (identical(other.watchTimes, watchTimes) ||
-                other.watchTimes == watchTimes));
+            const DeepCollectionEquality()
+                .equals(other.watchTimes, watchTimes));
   }
 
   @JsonKey(ignore: true)
@@ -314,7 +314,7 @@ class _$_AdCampaignMetaData implements _AdCampaignMetaData {
       playableUrl,
       const DeepCollectionEquality().hash(playableDuration),
       actionUrl,
-      watchTimes);
+      const DeepCollectionEquality().hash(watchTimes));
 
   @JsonKey(ignore: true)
   @override
@@ -342,7 +342,7 @@ abstract class _AdCampaignMetaData implements AdCampaignMetaData {
           @JsonKey(name: 'playable_duration', defaultValue: 0)
           final dynamic playableDuration,
           @JsonKey(name: 'action_url') final String? actionUrl,
-          @JsonKey(name: 'watch_times') final int? watchTimes}) =
+          @JsonKey(name: 'watch_times') final dynamic watchTimes}) =
       _$_AdCampaignMetaData;
 
   factory _AdCampaignMetaData.fromJson(Map<String, dynamic> json) =
@@ -374,7 +374,7 @@ abstract class _AdCampaignMetaData implements AdCampaignMetaData {
   String? get actionUrl;
   @override
   @JsonKey(name: 'watch_times')
-  int? get watchTimes;
+  dynamic get watchTimes;
   @override
   @JsonKey(ignore: true)
   _$$_AdCampaignMetaDataCopyWith<_$_AdCampaignMetaData> get copyWith =>

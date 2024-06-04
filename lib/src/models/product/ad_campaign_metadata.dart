@@ -17,7 +17,7 @@ class AdCampaignMetaData with _$AdCampaignMetaData {
     @JsonKey(name: 'playable_duration', defaultValue: 0)
         dynamic playableDuration,
     @JsonKey(name: 'action_url') String? actionUrl,
-    @JsonKey(name: 'watch_times') int? watchTimes,
+    @JsonKey(name: 'watch_times') dynamic watchTimes,
   }) = _AdCampaignMetaData;
 
   factory AdCampaignMetaData.fromJson(Map<String, dynamic> json) =>

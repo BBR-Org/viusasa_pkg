@@ -26,6 +26,7 @@ mixin _$DataGenre {
   String? get genreName => throw _privateConstructorUsedError;
   List<TrackModel>? get tracks => throw _privateConstructorUsedError;
   List<TrackModel>? get albums => throw _privateConstructorUsedError;
+  List<GenreModel>? get artists => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +43,8 @@ abstract class $DataGenreCopyWith<$Res> {
       {@JsonKey(name: 'genre_id') int? genreId,
       @JsonKey(name: 'genre_name') String? genreName,
       List<TrackModel>? tracks,
-      List<TrackModel>? albums});
+      List<TrackModel>? albums,
+      List<GenreModel>? artists});
 }
 
 /// @nodoc
@@ -62,6 +64,7 @@ class _$DataGenreCopyWithImpl<$Res, $Val extends DataGenre>
     Object? genreName = freezed,
     Object? tracks = freezed,
     Object? albums = freezed,
+    Object? artists = freezed,
   }) {
     return _then(_value.copyWith(
       genreId: freezed == genreId
@@ -80,6 +83,10 @@ class _$DataGenreCopyWithImpl<$Res, $Val extends DataGenre>
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as List<TrackModel>?,
+      artists: freezed == artists
+          ? _value.artists
+          : artists // ignore: cast_nullable_to_non_nullable
+              as List<GenreModel>?,
     ) as $Val);
   }
 }
@@ -95,7 +102,8 @@ abstract class _$$_DataGenreCopyWith<$Res> implements $DataGenreCopyWith<$Res> {
       {@JsonKey(name: 'genre_id') int? genreId,
       @JsonKey(name: 'genre_name') String? genreName,
       List<TrackModel>? tracks,
-      List<TrackModel>? albums});
+      List<TrackModel>? albums,
+      List<GenreModel>? artists});
 }
 
 /// @nodoc
@@ -113,6 +121,7 @@ class __$$_DataGenreCopyWithImpl<$Res>
     Object? genreName = freezed,
     Object? tracks = freezed,
     Object? albums = freezed,
+    Object? artists = freezed,
   }) {
     return _then(_$_DataGenre(
       genreId: freezed == genreId
@@ -131,6 +140,10 @@ class __$$_DataGenreCopyWithImpl<$Res>
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
               as List<TrackModel>?,
+      artists: freezed == artists
+          ? _value._artists
+          : artists // ignore: cast_nullable_to_non_nullable
+              as List<GenreModel>?,
     ));
   }
 }
@@ -143,9 +156,11 @@ class _$_DataGenre implements _DataGenre {
       {@JsonKey(name: 'genre_id') this.genreId,
       @JsonKey(name: 'genre_name') this.genreName,
       final List<TrackModel>? tracks,
-      final List<TrackModel>? albums})
+      final List<TrackModel>? albums,
+      final List<GenreModel>? artists})
       : _tracks = tracks,
-        _albums = albums;
+        _albums = albums,
+        _artists = artists;
 
   factory _$_DataGenre.fromJson(Map<String, dynamic> json) =>
       _$$_DataGenreFromJson(json);
@@ -176,9 +191,19 @@ class _$_DataGenre implements _DataGenre {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<GenreModel>? _artists;
+  @override
+  List<GenreModel>? get artists {
+    final value = _artists;
+    if (value == null) return null;
+    if (_artists is EqualUnmodifiableListView) return _artists;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'DataGenre(genreId: $genreId, genreName: $genreName, tracks: $tracks, albums: $albums)';
+    return 'DataGenre(genreId: $genreId, genreName: $genreName, tracks: $tracks, albums: $albums, artists: $artists)';
   }
 
   @override
@@ -190,7 +215,8 @@ class _$_DataGenre implements _DataGenre {
             (identical(other.genreName, genreName) ||
                 other.genreName == genreName) &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
-            const DeepCollectionEquality().equals(other._albums, _albums));
+            const DeepCollectionEquality().equals(other._albums, _albums) &&
+            const DeepCollectionEquality().equals(other._artists, _artists));
   }
 
   @JsonKey(ignore: true)
@@ -200,7 +226,8 @@ class _$_DataGenre implements _DataGenre {
       genreId,
       genreName,
       const DeepCollectionEquality().hash(_tracks),
-      const DeepCollectionEquality().hash(_albums));
+      const DeepCollectionEquality().hash(_albums),
+      const DeepCollectionEquality().hash(_artists));
 
   @JsonKey(ignore: true)
   @override
@@ -221,7 +248,8 @@ abstract class _DataGenre implements DataGenre {
       {@JsonKey(name: 'genre_id') final int? genreId,
       @JsonKey(name: 'genre_name') final String? genreName,
       final List<TrackModel>? tracks,
-      final List<TrackModel>? albums}) = _$_DataGenre;
+      final List<TrackModel>? albums,
+      final List<GenreModel>? artists}) = _$_DataGenre;
 
   factory _DataGenre.fromJson(Map<String, dynamic> json) =
       _$_DataGenre.fromJson;
@@ -236,6 +264,8 @@ abstract class _DataGenre implements DataGenre {
   List<TrackModel>? get tracks;
   @override
   List<TrackModel>? get albums;
+  @override
+  List<GenreModel>? get artists;
   @override
   @JsonKey(ignore: true)
   _$$_DataGenreCopyWith<_$_DataGenre> get copyWith =>
